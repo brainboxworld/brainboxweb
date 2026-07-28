@@ -609,12 +609,15 @@ function ContactPanel() {
               href={s.href}
               target="_blank"
               rel="noreferrer"
-              className="rounded-lg border border-border px-4 py-2 text-sm font-medium transition-colors hover:bg-muted"
+              title={s.label}
+              aria-label={s.label}
+              className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-border text-foreground transition-colors hover:bg-gradient-brand hover:text-brand-foreground"
             >
-              {s.label}
+              <SocialIcon name={s.icon} />
             </a>
           ))}
         </div>
+
       </section>
     </div>
   );
