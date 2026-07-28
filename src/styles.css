@@ -137,6 +137,11 @@
   --sidebar-ring: oklch(0.551 0.027 264.364);
 }
 
+@theme inline {
+  --color-brand: var(--brand);
+  --color-brand-foreground: var(--brand-foreground);
+}
+
 @layer base {
   * {
     border-color: var(--color-border);
@@ -145,5 +150,18 @@
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
+    font-family: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
   }
 }
+
+@utility surface-card {
+  background-color: var(--color-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-card);
+}
+
+@utility bg-gradient-brand {
+  background-image: var(--gradient-brand);
+}
+
