@@ -213,7 +213,48 @@ export const services = [
     returning: "33 returning clients",
     price: "$200 - $350",
   },
+  {
+    image: svcAiVisibility,
+    title: "AI Visibility",
+    body: "Get your brand surfaced by AI assistants and answer engines with structured data, entity clean-up and AI-ready product content.",
+    rating: "5.0",
+    reviews: "48",
+    experts: "3 specialists available",
+    returning: "19 returning clients",
+    price: "$250 - $450",
+  },
+  {
+    image: svcContentWriting,
+    title: "Content Writing",
+    body: "Product descriptions, collection copy, blogs and landing page writing built to rank and to persuade shoppers.",
+    rating: "5.0",
+    reviews: "91",
+    experts: "5 specialists available",
+    returning: "37 returning clients",
+    price: "$90 - $300",
+  },
+  {
+    image: svcUgcVideo,
+    title: "UGC & AI Video Creation",
+    body: "Creator-style product videos and AI-generated ad cuts made for TikTok, Reels and paid social testing.",
+    rating: "5.0",
+    reviews: "64",
+    experts: "4 specialists available",
+    returning: "26 returning clients",
+    price: "$120 - $400",
+  },
+  {
+    image: svcMarketplace,
+    title: "Facebook Marketplace Setup",
+    body: "Marketplace and Facebook Shop setup with catalogue syncing, listing optimisation and order routing that works.",
+    rating: "5.0",
+    reviews: "57",
+    experts: "3 specialists available",
+    returning: "22 returning clients",
+    price: "$150 - $280",
+  },
 ];
+
 
 export const successRatings = [
   { label: "Shopify Development", value: 98 },
