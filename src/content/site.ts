@@ -410,16 +410,59 @@ export const team = [
     photo: teamFawaz,
     name: "Bawa Aliyu Fawaz",
     role: "Shopify & Frontend Engineering",
-    email: "info@brainboxworld.dedyn.io",
+    email: "smartuxtech@gmail.com",
     bio: "Builds and customises Shopify themes, handles integrations and keeps storefronts fast and stable.",
   },
   {
     photo: teamPlaceholder,
-    name: "Yusuf AbdulAkeem",
+    name: "Yusuf Abdul Hakeem",
     role: "Project Manager & Marketing Specialist",
-    email: "info@brainboxworld.dedyn.io",
+    email: "blaqachraf@gmail.com",
     bio: "Coordinates projects end to end and runs multi-channel marketing so work ships on time and performs after launch.",
   },
+  {
+    photo: teamPlaceholder,
+    name: "William Reynolds",
+    role: "Business Planner & Marketing Strategist",
+    email: "williamreypartner@yahoomail.com",
+    bio: "Strategic business planning and comprehensive marketing strategy development for eCommerce success.",
+  },
+  {
+    photo: teamPlaceholder,
+    name: "Yusuf Abdul Qudus",
+    role: "Social Media Manager & Marketing Expert",
+    email: "hiluxetech@gmail.com",
+    bio: "Specializes in creating engaging social media campaigns across Facebook, Instagram, TikTok and Pinterest for maximum brand visibility.",
+  },
+  {
+    photo: teamPlaceholder,
+    name: "Sulyman Mubaraq",
+    role: "Google Developer & SEO Specialist",
+    email: "info.theheroesagency@gmail.com",
+    bio: "Google certified developer focusing on technical SEO, Google Ads optimization and search engine ranking improvement.",
+  },
+  {
+    photo: teamPlaceholder,
+    name: "Yunus Amamat",
+    role: "Backend Developer & Technical Optimization Specialist",
+    email: "triumphproagency@gmail.com",
+    bio: "Backend expert handling complex integrations, app development and technical optimizations for high-performance stores.",
+  },
+  {
+    photo: teamPlaceholder,
+    name: "Muhammed Teslim",
+    role: "Content Marketing & SEO Specialist",
+    email: "theonlypeaceexpert@gmail.com",
+    bio: "Content strategist and SEO expert creating compelling content that ranks well and converts visitors into customers.",
+  },
+  {
+    photo: teamPlaceholder,
+    name: "Soliu Lukman",
+    role: "UGC & AI Video Specialist",
+    email: "mrbrightugc@gmail.com",
+    bio: "Produces creator-style UGC and AI-generated video ads that give products scroll-stopping presence on social.",
+  },
+
 ];
 
 export const contactIntro =
