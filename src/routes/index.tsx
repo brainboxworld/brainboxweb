@@ -180,19 +180,22 @@ function Index() {
             <h2 className="text-sm font-semibold uppercase tracking-wide text-muted-foreground">
               Follow us
             </h2>
-            <div className="mt-3 grid gap-2">
+            <div className="mt-3 flex flex-wrap justify-center gap-2">
               {socials.map((s) => (
                 <a
                   key={s.label}
                   href={s.href}
                   target="_blank"
                   rel="noreferrer"
-                  className="rounded-lg border border-border px-3 py-2 text-sm font-medium transition-colors hover:bg-muted"
+                  title={s.label}
+                  aria-label={s.label}
+                  className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-border text-foreground transition-colors hover:bg-gradient-brand hover:text-brand-foreground"
                 >
-                  {s.label}
+                  <SocialIcon name={s.icon} />
                 </a>
               ))}
             </div>
+
           </div>
         </aside>
 
