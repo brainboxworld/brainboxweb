@@ -113,14 +113,16 @@ function Index() {
         {/* Sidebar */}
         <aside className="space-y-4">
           <div className="surface-card p-6 text-center">
-            <img
-              src={brand.partnerBadge}
-              alt={`${brand.name} ${brand.partnerBadgeLabel} badge`}
-              width={816}
-              height={816}
-              loading="lazy"
-              className="mx-auto h-20 w-20 object-contain"
-            />
+            <div className="mx-auto inline-flex items-center rounded-xl border border-border bg-card px-3 py-2">
+              <img
+                src={brand.shopifyPartnerBadge}
+                alt="Shopify Partner"
+                width={556}
+                height={200}
+                loading="lazy"
+                className="h-8 w-auto object-contain"
+              />
+            </div>
             <img
               src={brand.logo}
               alt={`${brand.name} logo`}
@@ -136,9 +138,10 @@ function Index() {
               <span className="text-muted-foreground">({brand.reviewCount})</span>
             </p>
 
-            <span className="mt-3 inline-block rounded-full bg-muted px-3 py-1 text-xs font-semibold text-secondary-foreground">
+            <span className="mt-3 inline-block rounded-full bg-gradient-brand px-3 py-1 text-xs font-semibold text-brand-foreground">
               {brand.partnerBadgeLabel}
             </span>
+
 
             <p className="mt-4 text-sm italic text-muted-foreground">“{brand.quote}”</p>
 
