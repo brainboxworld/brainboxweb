@@ -22,6 +22,7 @@
 import logo from "@/assets/brainboxworld-logo.png";
 import banner from "@/assets/brainboxworld-banner.jpg";
 import partnerBadge from "@/assets/partner-badge.png";
+import shopifyPartner from "@/assets/shopify-partner.jpg.asset.json";
 
 // Team photos
 import teamAdam from "@/assets/team-adam.jpg";
@@ -38,6 +39,10 @@ import svcSocialShop from "@/assets/service-social-shop.jpg";
 import svcErrors from "@/assets/service-error-fixing.jpg";
 import svcSocialAds from "@/assets/service-social-ads.jpg";
 import svcSearchAds from "@/assets/service-search-ads.jpg";
+import svcAiVisibility from "@/assets/service-ai-visibility.jpg";
+import svcContentWriting from "@/assets/service-content-writing.jpg";
+import svcUgcVideo from "@/assets/service-ugc-video.jpg";
+import svcMarketplace from "@/assets/service-marketplace.jpg";
 
 // Portfolio images
 import workMerchant from "@/assets/work-merchant.jpg";
@@ -46,6 +51,7 @@ import workSpeed from "@/assets/work-speed.jpg";
 import workSales from "@/assets/work-sales.jpg";
 import workAds from "@/assets/work-fashion.jpg";
 import workDecor from "@/assets/work-home-decor.jpg";
+
 
 export const brand = {
   name: "Brainboxworld",
