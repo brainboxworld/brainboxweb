@@ -109,6 +109,10 @@ export const skills = [
   "Store Migration",
   "Speed Optimization",
   "Ongoing Store Management",
+  "AI Visibility",
+  "Content Writing",
+  "UGC & AI Video Creation",
+  "Facebook Marketplace Setup",
 ];
 
 export const metrics = [
