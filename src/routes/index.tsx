@@ -48,6 +48,38 @@ export const Route = createFileRoute("/")({
   component: Index,
 });
 
+function SocialIcon({ name }: { name?: string }) {
+  const cls = "h-4 w-4";
+  switch (name) {
+    case "linkedin":
+      return (
+        <svg viewBox="0 0 24 24" fill="currentColor" className={cls} aria-hidden="true">
+          <path d="M4.98 3.5A2.5 2.5 0 1 1 0 3.5a2.5 2.5 0 0 1 4.98 0ZM.3 8.2h4.4V24H.3V8.2Zm7.5 0h4.2v2.2h.06c.6-1.1 2.05-2.2 4.2-2.2 4.5 0 5.34 2.9 5.34 6.7V24h-4.4v-7.7c0-1.84-.03-4.2-2.6-4.2-2.6 0-3 2-3 4.07V24H7.8V8.2Z" />
+        </svg>
+      );
+    case "instagram":
+      return (
+        <svg viewBox="0 0 24 24" fill="currentColor" className={cls} aria-hidden="true">
+          <path d="M12 2.2c3.2 0 3.6 0 4.85.07 1.17.05 1.8.25 2.23.42.56.22.96.48 1.38.9.42.42.68.82.9 1.38.17.42.37 1.06.42 2.23.06 1.25.07 1.62.07 4.8s-.01 3.55-.07 4.8c-.05 1.17-.25 1.8-.42 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.17-1.06.37-2.23.42-1.25.06-1.62.07-4.85.07s-3.6-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.42a3.8 3.8 0 0 1-1.38-.9 3.8 3.8 0 0 1-.9-1.38c-.17-.42-.37-1.06-.42-2.23C2.21 15.55 2.2 15.18 2.2 12s.01-3.55.07-4.8c.05-1.17.25-1.8.42-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.17 1.06-.37 2.23-.42C8.45 2.21 8.82 2.2 12 2.2Zm0 3.05A6.75 6.75 0 1 0 18.75 12 6.75 6.75 0 0 0 12 5.25Zm0 11.13A4.38 4.38 0 1 1 16.38 12 4.38 4.38 0 0 1 12 16.38Zm6.99-11.4a1.58 1.58 0 1 1-1.58-1.57 1.58 1.58 0 0 1 1.58 1.57Z" />
+        </svg>
+      );
+    case "tiktok":
+      return (
+        <svg viewBox="0 0 24 24" fill="currentColor" className={cls} aria-hidden="true">
+          <path d="M16.6 5.82A4.9 4.9 0 0 1 15.4 2h-3.32v13.3a2.9 2.9 0 1 1-2.06-2.78V9.1a6.2 6.2 0 1 0 5.38 6.14V8.9a8.2 8.2 0 0 0 4.8 1.54V7.12a4.9 4.9 0 0 1-3.6-1.3Z" />
+        </svg>
+      );
+    case "x":
+      return (
+        <svg viewBox="0 0 24 24" fill="currentColor" className={cls} aria-hidden="true">
+          <path d="M18.24 2.25h3.3l-7.2 8.24L23 21.75h-6.63l-5.2-6.8-5.94 6.8H1.92l7.7-8.8L1.25 2.25h6.8l4.7 6.21 5.49-6.21Zm-1.16 17.52h1.83L7.01 4.13H5.05l12.03 15.64Z" />
+        </svg>
+      );
+    default:
+      return null;
+  }
+}
+
 function SectionHeader({ title, intro }: { title: string; intro?: string }) {
   return (
     <div className="text-center">
@@ -60,6 +92,7 @@ function SectionHeader({ title, intro }: { title: string; intro?: string }) {
     </div>
   );
 }
+
 
 function Index() {
   const [tab, setTab] = useState<Tab>("About");
@@ -80,14 +113,16 @@ function Index() {
         {/* Sidebar */}
         <aside className="space-y-4">
           <div className="surface-card p-6 text-center">
-            <img
-              src={brand.partnerBadge}
-              alt={`${brand.name} ${brand.partnerBadgeLabel} badge`}
-              width={816}
-              height={816}
-              loading="lazy"
-              className="mx-auto h-20 w-20 object-contain"
-            />
+            <div className="mx-auto inline-flex items-center rounded-xl border border-border bg-card px-3 py-2">
+              <img
+                src={brand.shopifyPartnerBadge}
+                alt="Shopify Partner"
+                width={556}
+                height={200}
+                loading="lazy"
+                className="h-8 w-auto object-contain"
+              />
+            </div>
             <img
               src={brand.logo}
               alt={`${brand.name} logo`}
@@ -103,9 +138,10 @@ function Index() {
               <span className="text-muted-foreground">({brand.reviewCount})</span>
             </p>
 
-            <span className="mt-3 inline-block rounded-full bg-muted px-3 py-1 text-xs font-semibold text-secondary-foreground">
+            <span className="mt-3 inline-block rounded-full bg-gradient-brand px-3 py-1 text-xs font-semibold text-brand-foreground">
               {brand.partnerBadgeLabel}
             </span>
+
 
             <p className="mt-4 text-sm italic text-muted-foreground">“{brand.quote}”</p>
 
@@ -144,19 +180,22 @@ function Index() {
             <h2 className="text-sm font-semibold uppercase tracking-wide text-muted-foreground">
               Follow us
             </h2>
-            <div className="mt-3 grid gap-2">
+            <div className="mt-3 flex flex-wrap justify-center gap-2">
               {socials.map((s) => (
                 <a
                   key={s.label}
                   href={s.href}
                   target="_blank"
                   rel="noreferrer"
-                  className="rounded-lg border border-border px-3 py-2 text-sm font-medium transition-colors hover:bg-muted"
+                  title={s.label}
+                  aria-label={s.label}
+                  className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-border text-foreground transition-colors hover:bg-gradient-brand hover:text-brand-foreground"
                 >
-                  {s.label}
+                  <SocialIcon name={s.icon} />
                 </a>
               ))}
             </div>
+
           </div>
         </aside>
 
@@ -570,12 +609,15 @@ function ContactPanel() {
               href={s.href}
               target="_blank"
               rel="noreferrer"
-              className="rounded-lg border border-border px-4 py-2 text-sm font-medium transition-colors hover:bg-muted"
+              title={s.label}
+              aria-label={s.label}
+              className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-border text-foreground transition-colors hover:bg-gradient-brand hover:text-brand-foreground"
             >
-              {s.label}
+              <SocialIcon name={s.icon} />
             </a>
           ))}
         </div>
+
       </section>
     </div>
   );

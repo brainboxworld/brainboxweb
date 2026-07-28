@@ -22,6 +22,7 @@
 import logo from "@/assets/brainboxworld-logo.png";
 import banner from "@/assets/brainboxworld-banner.jpg";
 import partnerBadge from "@/assets/partner-badge.png";
+import shopifyPartner from "@/assets/shopify-partner.jpg.asset.json";
 
 // Team photos
 import teamAdam from "@/assets/team-adam.jpg";
@@ -38,6 +39,10 @@ import svcSocialShop from "@/assets/service-social-shop.jpg";
 import svcErrors from "@/assets/service-error-fixing.jpg";
 import svcSocialAds from "@/assets/service-social-ads.jpg";
 import svcSearchAds from "@/assets/service-search-ads.jpg";
+import svcAiVisibility from "@/assets/service-ai-visibility.jpg";
+import svcContentWriting from "@/assets/service-content-writing.jpg";
+import svcUgcVideo from "@/assets/service-ugc-video.jpg";
+import svcMarketplace from "@/assets/service-marketplace.jpg";
 
 // Portfolio images
 import workMerchant from "@/assets/work-merchant.jpg";
@@ -46,6 +51,7 @@ import workSpeed from "@/assets/work-speed.jpg";
 import workSales from "@/assets/work-sales.jpg";
 import workAds from "@/assets/work-fashion.jpg";
 import workDecor from "@/assets/work-home-decor.jpg";
+
 
 export const brand = {
   name: "Brainboxworld",
@@ -56,7 +62,9 @@ export const brand = {
   logo,
   banner,
   partnerBadge,
-  partnerBadgeLabel: "Certified Partner",
+  shopifyPartnerBadge: shopifyPartner.url,
+  partnerBadgeLabel: "Shopify Partner",
+
   rating: "5.0",
   reviewCount: "412 reviews",
   locations: "United States, United Kingdom & West Africa",
@@ -70,13 +78,15 @@ export const contact = {
   email: "info@brainboxworld.dedyn.io",
 };
 
+// icon can be: "linkedin" | "instagram" | "tiktok" | "x"
 export const socials = [
-  { label: "Brand LinkedIn", href: "https://www.linkedin.com/company/brainboxworld/" },
-  { label: "Founder LinkedIn", href: "https://www.linkedin.com/in/adam-bawa-aliyu-8463a93b2" },
-  { label: "Instagram", href: "https://www.instagram.com/brainboxproworld" },
-  { label: "TikTok", href: "https://www.tiktok.com/@brainboxworld" },
-  { label: "X (Twitter)", href: "https://x.com/Brainboxworld" },
+  { label: "Brand LinkedIn", icon: "linkedin", href: "https://www.linkedin.com/company/brainboxworld/" },
+  { label: "Founder LinkedIn", icon: "linkedin", href: "https://www.linkedin.com/in/adam-bawa-aliyu-8463a93b2" },
+  { label: "Instagram", icon: "instagram", href: "https://www.instagram.com/brainboxproworld" },
+  { label: "TikTok", icon: "tiktok", href: "https://www.tiktok.com/@brainboxworld" },
+  { label: "X (Twitter)", icon: "x", href: "https://x.com/Brainboxworld" },
 ];
+
 
 export const about = {
   heading: "About Us",
@@ -99,6 +109,10 @@ export const skills = [
   "Store Migration",
   "Speed Optimization",
   "Ongoing Store Management",
+  "AI Visibility",
+  "Content Writing",
+  "UGC & AI Video Creation",
+  "Facebook Marketplace Setup",
 ];
 
 export const metrics = [
@@ -203,7 +217,48 @@ export const services = [
     returning: "33 returning clients",
     price: "$200 - $350",
   },
+  {
+    image: svcAiVisibility,
+    title: "AI Visibility",
+    body: "Get your brand surfaced by AI assistants and answer engines with structured data, entity clean-up and AI-ready product content.",
+    rating: "5.0",
+    reviews: "48",
+    experts: "3 specialists available",
+    returning: "19 returning clients",
+    price: "$250 - $450",
+  },
+  {
+    image: svcContentWriting,
+    title: "Content Writing",
+    body: "Product descriptions, collection copy, blogs and landing page writing built to rank and to persuade shoppers.",
+    rating: "5.0",
+    reviews: "91",
+    experts: "5 specialists available",
+    returning: "37 returning clients",
+    price: "$90 - $300",
+  },
+  {
+    image: svcUgcVideo,
+    title: "UGC & AI Video Creation",
+    body: "Creator-style product videos and AI-generated ad cuts made for TikTok, Reels and paid social testing.",
+    rating: "5.0",
+    reviews: "64",
+    experts: "4 specialists available",
+    returning: "26 returning clients",
+    price: "$120 - $400",
+  },
+  {
+    image: svcMarketplace,
+    title: "Facebook Marketplace Setup",
+    body: "Marketplace and Facebook Shop setup with catalogue syncing, listing optimisation and order routing that works.",
+    rating: "5.0",
+    reviews: "57",
+    experts: "3 specialists available",
+    returning: "22 returning clients",
+    price: "$150 - $280",
+  },
 ];
+
 
 export const successRatings = [
   { label: "Shopify Development", value: 98 },
@@ -359,16 +414,59 @@ export const team = [
     photo: teamFawaz,
     name: "Bawa Aliyu Fawaz",
     role: "Shopify & Frontend Engineering",
-    email: "info@brainboxworld.dedyn.io",
+    email: "smartuxtech@gmail.com",
     bio: "Builds and customises Shopify themes, handles integrations and keeps storefronts fast and stable.",
   },
   {
     photo: teamPlaceholder,
-    name: "Yusuf AbdulAkeem",
+    name: "Yusuf Abdul Hakeem",
     role: "Project Manager & Marketing Specialist",
-    email: "info@brainboxworld.dedyn.io",
+    email: "blaqachraf@gmail.com",
     bio: "Coordinates projects end to end and runs multi-channel marketing so work ships on time and performs after launch.",
   },
+  {
+    photo: teamPlaceholder,
+    name: "William Reynolds",
+    role: "Business Planner & Marketing Strategist",
+    email: "williamreypartner@yahoomail.com",
+    bio: "Strategic business planning and comprehensive marketing strategy development for eCommerce success.",
+  },
+  {
+    photo: teamPlaceholder,
+    name: "Yusuf Abdul Qudus",
+    role: "Social Media Manager & Marketing Expert",
+    email: "hiluxetech@gmail.com",
+    bio: "Specializes in creating engaging social media campaigns across Facebook, Instagram, TikTok and Pinterest for maximum brand visibility.",
+  },
+  {
+    photo: teamPlaceholder,
+    name: "Sulyman Mubaraq",
+    role: "Google Developer & SEO Specialist",
+    email: "info.theheroesagency@gmail.com",
+    bio: "Google certified developer focusing on technical SEO, Google Ads optimization and search engine ranking improvement.",
+  },
+  {
+    photo: teamPlaceholder,
+    name: "Yunus Amamat",
+    role: "Backend Developer & Technical Optimization Specialist",
+    email: "triumphproagency@gmail.com",
+    bio: "Backend expert handling complex integrations, app development and technical optimizations for high-performance stores.",
+  },
+  {
+    photo: teamPlaceholder,
+    name: "Muhammed Teslim",
+    role: "Content Marketing & SEO Specialist",
+    email: "theonlypeaceexpert@gmail.com",
+    bio: "Content strategist and SEO expert creating compelling content that ranks well and converts visitors into customers.",
+  },
+  {
+    photo: teamPlaceholder,
+    name: "Soliu Lukman",
+    role: "UGC & AI Video Specialist",
+    email: "mrbrightugc@gmail.com",
+    bio: "Produces creator-style UGC and AI-generated video ads that give products scroll-stopping presence on social.",
+  },
+
 ];
 
 export const contactIntro =
