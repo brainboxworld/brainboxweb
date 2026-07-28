@@ -62,7 +62,9 @@ export const brand = {
   logo,
   banner,
   partnerBadge,
-  partnerBadgeLabel: "Certified Partner",
+  shopifyPartnerBadge: shopifyPartner.url,
+  partnerBadgeLabel: "Shopify Partner",
+
   rating: "5.0",
   reviewCount: "412 reviews",
   locations: "United States, United Kingdom & West Africa",
@@ -76,13 +78,15 @@ export const contact = {
   email: "info@brainboxworld.dedyn.io",
 };
 
+// icon can be: "linkedin" | "instagram" | "tiktok" | "x"
 export const socials = [
-  { label: "Brand LinkedIn", href: "https://www.linkedin.com/company/brainboxworld/" },
-  { label: "Founder LinkedIn", href: "https://www.linkedin.com/in/adam-bawa-aliyu-8463a93b2" },
-  { label: "Instagram", href: "https://www.instagram.com/brainboxproworld" },
-  { label: "TikTok", href: "https://www.tiktok.com/@brainboxworld" },
-  { label: "X (Twitter)", href: "https://x.com/Brainboxworld" },
+  { label: "Brand LinkedIn", icon: "linkedin", href: "https://www.linkedin.com/company/brainboxworld/" },
+  { label: "Founder LinkedIn", icon: "linkedin", href: "https://www.linkedin.com/in/adam-bawa-aliyu-8463a93b2" },
+  { label: "Instagram", icon: "instagram", href: "https://www.instagram.com/brainboxproworld" },
+  { label: "TikTok", icon: "tiktok", href: "https://www.tiktok.com/@brainboxworld" },
+  { label: "X (Twitter)", icon: "x", href: "https://x.com/Brainboxworld" },
 ];
+
 
 export const about = {
   heading: "About Us",
