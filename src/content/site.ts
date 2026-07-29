@@ -418,28 +418,28 @@ export const team = [
     bio: "Leads strategy and client delivery, with years of experience taking eCommerce brands from first build to steady growth.",
   },
   {
-    photo: teamFawaz,
+    photo: teamFawazAsset.url,
     name: "Bawa Aliyu Fawaz",
     role: "Shopify & Frontend Engineering",
     email: "smartuxtech@gmail.com",
     bio: "Builds and customises Shopify themes, handles integrations and keeps storefronts fast and stable.",
   },
   {
-    photo: teamPlaceholder,
+    photo: teamHakeemAsset.url,
     name: "Yusuf Abdul Hakeem",
     role: "Project Manager & Marketing Specialist",
     email: "blaqachraf@gmail.com",
     bio: "Coordinates projects end to end and runs multi-channel marketing so work ships on time and performs after launch.",
   },
   {
-    photo: teamPlaceholder,
-    name: "William Reynolds",
+    photo: teamRosheedAsset.url,
+    name: "Muhd Soliu Abdul Rosheed",
     role: "Business Planner & Marketing Strategist",
-    email: "williamreypartner@yahoomail.com",
+    email: "crowntech.partner@gmail.com",
     bio: "Strategic business planning and comprehensive marketing strategy development for eCommerce success.",
   },
   {
-    photo: teamPlaceholder,
+    photo: teamQudusAsset.url,
     name: "Yusuf Abdul Qudus",
     role: "Social Media Manager & Marketing Expert",
     email: "hiluxetech@gmail.com",
@@ -453,26 +453,27 @@ export const team = [
     bio: "Google certified developer focusing on technical SEO, Google Ads optimization and search engine ranking improvement.",
   },
   {
-    photo: teamPlaceholder,
+    photo: teamYunusAsset.url,
     name: "Yunus Amamat",
     role: "Backend Developer & Technical Optimization Specialist",
     email: "triumphproagency@gmail.com",
     bio: "Backend expert handling complex integrations, app development and technical optimizations for high-performance stores.",
   },
   {
-    photo: teamPlaceholder,
+    photo: teamTeslimAsset.url,
     name: "Muhammed Teslim",
     role: "Content Marketing & SEO Specialist",
     email: "theonlypeaceexpert@gmail.com",
     bio: "Content strategist and SEO expert creating compelling content that ranks well and converts visitors into customers.",
   },
   {
-    photo: teamPlaceholder,
+    photo: teamLukmanAsset.url,
     name: "Soliu Lukman",
     role: "UGC & AI Video Specialist",
     email: "mrbrightugc@gmail.com",
     bio: "Produces creator-style UGC and AI-generated video ads that give products scroll-stopping presence on social.",
   },
+
 
 ];
 
