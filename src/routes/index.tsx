@@ -119,7 +119,19 @@ function Index() {
 
   return (
     <div className="min-h-screen bg-background">
-      <div className="relative h-44 w-full overflow-hidden md:h-60">
+      <div className="border-b border-border bg-card">
+        <div className="mx-auto flex max-w-6xl items-center justify-center px-4 py-3">
+          <img
+            src={brand.shopifyPartnerBadge}
+            alt="Shopify Partner"
+            width={556}
+            height={200}
+            className="h-8 w-auto max-w-full object-contain sm:h-10"
+          />
+        </div>
+      </div>
+
+      <div className="relative h-36 w-full overflow-hidden sm:h-44 md:h-60">
         <img
           src={brand.banner}
           alt={`${brand.name} eCommerce agency banner`}
@@ -129,22 +141,10 @@ function Index() {
         />
       </div>
 
-      <div className="mx-auto grid max-w-6xl gap-6 px-4 py-8 lg:grid-cols-[320px_1fr]">
+      <div className="mx-auto grid max-w-6xl gap-6 px-3 py-6 sm:px-4 sm:py-8 lg:grid-cols-[320px_1fr]">
         {/* Sidebar */}
         <aside className="space-y-4">
-          <div className="surface-card p-6 text-center">
-            <div className="mx-auto flex w-full flex-col items-center gap-2 rounded-xl border border-border bg-card px-4 py-4">
-              <img
-                src={brand.shopifyPartnerBadge}
-                alt="Shopify Partner"
-                width={556}
-                height={200}
-                className="h-10 w-auto max-w-full object-contain"
-              />
-              <span className="text-[11px] font-semibold uppercase tracking-wider text-muted-foreground">
-                Official Shopify Partner
-              </span>
-            </div>
+          <div className="surface-card p-5 text-center sm:p-6">
 
             <img
               src={brand.logo}
