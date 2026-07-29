@@ -113,16 +113,19 @@ function Index() {
         {/* Sidebar */}
         <aside className="space-y-4">
           <div className="surface-card p-6 text-center">
-            <div className="mx-auto inline-flex items-center rounded-xl border border-border bg-card px-3 py-2">
+            <div className="mx-auto flex w-full flex-col items-center gap-2 rounded-xl border border-border bg-card px-4 py-4">
               <img
                 src={brand.shopifyPartnerBadge}
                 alt="Shopify Partner"
                 width={556}
                 height={200}
-                loading="lazy"
-                className="h-8 w-auto object-contain"
+                className="h-10 w-auto max-w-full object-contain"
               />
+              <span className="text-[11px] font-semibold uppercase tracking-wider text-muted-foreground">
+                Official Shopify Partner
+              </span>
             </div>
+
             <img
               src={brand.logo}
               alt={`${brand.name} logo`}
@@ -357,26 +360,39 @@ function Index() {
               <div className="mt-6 space-y-4">
                 {reviews.map((r) => (
                   <blockquote key={r.name} className="rounded-xl border border-border p-5">
-                    <div className="flex flex-wrap items-center gap-2 text-xs text-muted-foreground">
-                      <span className="flex h-8 w-8 items-center justify-center rounded-full bg-gradient-brand text-xs font-bold text-brand-foreground">
+                    <div className="flex items-center gap-3">
+                      <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-gradient-brand text-sm font-bold text-brand-foreground">
                         {r.name.charAt(0)}
                       </span>
-                      <span className="font-semibold text-foreground">{r.name}</span>
-                      <span>
-                        {r.flag} {r.country}
-                      </span>
+                      <div className="min-w-0">
+                        <p className="text-sm font-semibold text-foreground">{r.name}</p>
+                        <p className="flex items-center gap-1.5 text-xs text-muted-foreground">
+                          <span aria-hidden="true" className="text-base leading-none">
+                            {r.flag}
+                          </span>
+                          <span>{r.country}</span>
+                        </p>
+                      </div>
+                    </div>
+                    <div className="mt-3 flex items-center gap-2 text-xs text-muted-foreground">
+                      <span className="tracking-tight text-foreground">★★★★★</span>
+                      <span>5</span>
                       <span>• {r.when}</span>
                     </div>
                     <p className="mt-3 text-sm leading-relaxed">“{r.text}”</p>
-                    <footer className="mt-3 flex flex-wrap gap-2 text-xs text-muted-foreground">
-                      <span className="rounded-full bg-muted px-2.5 py-1">Price: {r.price}</span>
-                      <span className="rounded-full bg-muted px-2.5 py-1">
-                        Duration: {r.duration}
-                      </span>
-                      <span className="rounded-full bg-muted px-2.5 py-1">Shopify</span>
+                    <footer className="mt-4 grid grid-cols-2 gap-4 border-t border-border pt-3 text-xs sm:w-2/3">
+                      <div>
+                        <p className="font-semibold text-foreground">{r.price}</p>
+                        <p className="text-muted-foreground">Price</p>
+                      </div>
+                      <div>
+                        <p className="font-semibold text-foreground">{r.duration}</p>
+                        <p className="text-muted-foreground">Duration</p>
+                      </div>
                     </footer>
                   </blockquote>
                 ))}
+
               </div>
             </section>
           )}

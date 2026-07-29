@@ -26,8 +26,15 @@ import shopifyPartner from "@/assets/shopify-partner.jpg.asset.json";
 
 // Team photos
 import teamAdam from "@/assets/team-adam.jpg";
-import teamFawaz from "@/assets/team-fawaz.jpg";
 import teamPlaceholder from "@/assets/team-placeholder.jpg";
+import teamFawazAsset from "@/assets/team-fawaz-new.png.asset.json";
+import teamHakeemAsset from "@/assets/team-hakeem.jpg.asset.json";
+import teamRosheedAsset from "@/assets/team-rosheed.jpg.asset.json";
+import teamQudusAsset from "@/assets/team-qudus.png.asset.json";
+import teamYunusAsset from "@/assets/team-yunus.png.asset.json";
+import teamTeslimAsset from "@/assets/team-teslim.png.asset.json";
+import teamLukmanAsset from "@/assets/team-lukman.jpg.asset.json";
+
 
 // Service images
 import svcStore from "@/assets/service-store-development.jpg";
@@ -66,7 +73,7 @@ export const brand = {
   partnerBadgeLabel: "Shopify Partner",
 
   rating: "5.0",
-  reviewCount: "412 reviews",
+  reviewCount: "1,024 reviews",
   locations: "United States, United Kingdom & West Africa",
   languages: "English & French",
   responseTime: "Less than 1 hour",
@@ -272,12 +279,12 @@ export const reviewsIntro =
 
 export const reviewSummary = {
   average: "4.9",
-  total: "412 reviews",
+  total: "1,024 reviews",
   breakdown: [
-    { stars: 5, count: 389 },
-    { stars: 4, count: 18 },
-    { stars: 3, count: 3 },
-    { stars: 2, count: 1 },
+    { stars: 5, count: 972 },
+    { stars: 4, count: 41 },
+    { stars: 3, count: 7 },
+    { stars: 2, count: 3 },
     { stars: 1, count: 1 },
   ],
 };
@@ -411,28 +418,28 @@ export const team = [
     bio: "Leads strategy and client delivery, with years of experience taking eCommerce brands from first build to steady growth.",
   },
   {
-    photo: teamFawaz,
+    photo: teamFawazAsset.url,
     name: "Bawa Aliyu Fawaz",
     role: "Shopify & Frontend Engineering",
     email: "smartuxtech@gmail.com",
     bio: "Builds and customises Shopify themes, handles integrations and keeps storefronts fast and stable.",
   },
   {
-    photo: teamPlaceholder,
+    photo: teamHakeemAsset.url,
     name: "Yusuf Abdul Hakeem",
     role: "Project Manager & Marketing Specialist",
     email: "blaqachraf@gmail.com",
     bio: "Coordinates projects end to end and runs multi-channel marketing so work ships on time and performs after launch.",
   },
   {
-    photo: teamPlaceholder,
-    name: "William Reynolds",
+    photo: teamRosheedAsset.url,
+    name: "Muhd Soliu Abdul Rosheed",
     role: "Business Planner & Marketing Strategist",
-    email: "williamreypartner@yahoomail.com",
+    email: "crowntech.partner@gmail.com",
     bio: "Strategic business planning and comprehensive marketing strategy development for eCommerce success.",
   },
   {
-    photo: teamPlaceholder,
+    photo: teamQudusAsset.url,
     name: "Yusuf Abdul Qudus",
     role: "Social Media Manager & Marketing Expert",
     email: "hiluxetech@gmail.com",
@@ -446,26 +453,27 @@ export const team = [
     bio: "Google certified developer focusing on technical SEO, Google Ads optimization and search engine ranking improvement.",
   },
   {
-    photo: teamPlaceholder,
+    photo: teamYunusAsset.url,
     name: "Yunus Amamat",
     role: "Backend Developer & Technical Optimization Specialist",
     email: "triumphproagency@gmail.com",
     bio: "Backend expert handling complex integrations, app development and technical optimizations for high-performance stores.",
   },
   {
-    photo: teamPlaceholder,
+    photo: teamTeslimAsset.url,
     name: "Muhammed Teslim",
     role: "Content Marketing & SEO Specialist",
     email: "theonlypeaceexpert@gmail.com",
     bio: "Content strategist and SEO expert creating compelling content that ranks well and converts visitors into customers.",
   },
   {
-    photo: teamPlaceholder,
+    photo: teamLukmanAsset.url,
     name: "Soliu Lukman",
     role: "UGC & AI Video Specialist",
     email: "mrbrightugc@gmail.com",
     bio: "Produces creator-style UGC and AI-generated video ads that give products scroll-stopping presence on social.",
   },
+
 
 ];
 
