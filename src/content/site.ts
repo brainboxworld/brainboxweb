@@ -73,7 +73,7 @@ export const brand = {
   partnerBadgeLabel: "Shopify Partner",
 
   rating: "5.0",
-  reviewCount: "412 reviews",
+  reviewCount: "1,024 reviews",
   locations: "United States, United Kingdom & West Africa",
   languages: "English & French",
   responseTime: "Less than 1 hour",
@@ -279,12 +279,12 @@ export const reviewsIntro =
 
 export const reviewSummary = {
   average: "4.9",
-  total: "412 reviews",
+  total: "1,024 reviews",
   breakdown: [
-    { stars: 5, count: 389 },
-    { stars: 4, count: 18 },
-    { stars: 3, count: 3 },
-    { stars: 2, count: 1 },
+    { stars: 5, count: 972 },
+    { stars: 4, count: 41 },
+    { stars: 3, count: 7 },
+    { stars: 2, count: 3 },
     { stars: 1, count: 1 },
   ],
 };
