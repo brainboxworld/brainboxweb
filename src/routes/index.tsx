@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { ReviewsPanel } from "@/components/ReviewsPanel";
 import {
   brand,
   contact,
@@ -10,9 +11,6 @@ import {
   services,
   servicesIntro,
   successRatings,
-  reviews,
-  reviewsIntro,
-  reviewSummary,
   portfolio,
   portfolioIntro,
   team,
@@ -24,6 +22,28 @@ import {
 
 const TABS = ["About", "Services", "Reviews", "Portfolio", "Team", "Contact"] as const;
 type Tab = (typeof TABS)[number];
+
+function LocalTime() {
+  const [now, setNow] = useState<string | null>(null);
+
+  useEffect(() => {
+    const tick = () =>
+      setNow(
+        new Intl.DateTimeFormat("en-US", {
+          hour: "numeric",
+          minute: "2-digit",
+          hour12: true,
+          timeZone: brand.presence.timezone,
+        }).format(new Date()),
+      );
+    tick();
+    const id = setInterval(tick, 30_000);
+    return () => clearInterval(id);
+  }, []);
+
+  if (!now) return null;
+  return <span>{now} local time</span>;
+}
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -99,7 +119,19 @@ function Index() {
 
   return (
     <div className="min-h-screen bg-background">
-      <div className="relative h-44 w-full overflow-hidden md:h-60">
+      <div className="border-b border-border bg-card">
+        <div className="mx-auto flex max-w-6xl items-center justify-center px-4 py-3">
+          <img
+            src={brand.shopifyPartnerBadge}
+            alt="Shopify Partner"
+            width={556}
+            height={200}
+            className="h-8 w-auto max-w-full object-contain sm:h-10"
+          />
+        </div>
+      </div>
+
+      <div className="relative h-36 w-full overflow-hidden sm:h-44 md:h-60">
         <img
           src={brand.banner}
           alt={`${brand.name} eCommerce agency banner`}
@@ -109,30 +141,41 @@ function Index() {
         />
       </div>
 
-      <div className="mx-auto grid max-w-6xl gap-6 px-4 py-8 lg:grid-cols-[320px_1fr]">
+      <div className="mx-auto grid max-w-6xl gap-6 px-3 py-6 sm:px-4 sm:py-8 lg:grid-cols-[320px_1fr]">
         {/* Sidebar */}
         <aside className="space-y-4">
-          <div className="surface-card p-6 text-center">
-            <div className="mx-auto flex w-full flex-col items-center gap-2 rounded-xl border border-border bg-card px-4 py-4">
+          <div className="surface-card p-5 text-center sm:p-6">
+            <div className="relative mx-auto mt-2 w-28">
               <img
-                src={brand.shopifyPartnerBadge}
-                alt="Shopify Partner"
-                width={556}
-                height={200}
-                className="h-10 w-auto max-w-full object-contain"
+                src={brand.logo}
+                alt={`${brand.name} logo`}
+                width={768}
+                height={768}
+                className="h-28 w-28 rounded-full border border-border bg-card object-contain p-2"
               />
-              <span className="text-[11px] font-semibold uppercase tracking-wider text-muted-foreground">
-                Official Shopify Partner
+              <span className="absolute bottom-1 right-1 flex h-5 w-5 items-center justify-center rounded-full border-2 border-card bg-emerald-500">
+                <span className="sr-only">Online</span>
               </span>
             </div>
-
-            <img
-              src={brand.logo}
-              alt={`${brand.name} logo`}
-              width={768}
-              height={768}
-              className="mx-auto mt-4 h-28 w-28 rounded-full border border-border bg-card object-contain p-2"
-            />
+            <p className="mt-2 flex flex-wrap items-center justify-center gap-x-2 gap-y-1 text-xs text-muted-foreground">
+              <span className="inline-flex items-center gap-1.5 font-medium text-emerald-600">
+                <span className="h-2 w-2 rounded-full bg-emerald-500" aria-hidden="true" />
+                Online
+              </span>
+              <span aria-hidden="true">•</span>
+              <span className="inline-flex items-center gap-1.5">
+                <img
+                  src={`https://flagcdn.com/w40/${brand.presence.fromFlag}.png`}
+                  alt=""
+                  width={20}
+                  height={14}
+                  className="h-3.5 w-5 rounded-[2px] object-cover"
+                />
+                From {brand.presence.fromLabel}
+              </span>
+              <span aria-hidden="true">•</span>
+              <LocalTime />
+            </p>
             <h1 className="mt-4 text-2xl font-bold tracking-tight">{brand.name}</h1>
             <p className="mt-1 text-sm text-muted-foreground">{brand.tagline}</p>
 
@@ -326,76 +369,7 @@ function Index() {
             </>
           )}
 
-          {tab === "Reviews" && (
-            <section className="surface-card p-6 md:p-8">
-              <SectionHeader title="Client Reviews" intro={reviewsIntro} />
-
-              <div className="mt-6 grid gap-6 rounded-xl bg-muted p-5 md:grid-cols-[160px_1fr]">
-                <div className="text-center">
-                  <p className="text-4xl font-bold">{reviewSummary.average}</p>
-                  <p className="mt-1 text-xs text-muted-foreground">{reviewSummary.total}</p>
-                </div>
-                <div className="space-y-2">
-                  {reviewSummary.breakdown.map((b) => (
-                    <div key={b.stars} className="flex items-center gap-3 text-xs">
-                      <span className="w-4 font-medium">{b.stars}</span>
-                      <div className="h-2 flex-1 overflow-hidden rounded-full bg-background">
-                        <div
-                          className="h-full rounded-full bg-gradient-brand"
-                          style={{
-                            width: `${
-                              (b.count /
-                                reviewSummary.breakdown.reduce((a, c) => a + c.count, 0)) *
-                              100
-                            }%`,
-                          }}
-                        />
-                      </div>
-                      <span className="w-8 text-right text-muted-foreground">{b.count}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              <div className="mt-6 space-y-4">
-                {reviews.map((r) => (
-                  <blockquote key={r.name} className="rounded-xl border border-border p-5">
-                    <div className="flex items-center gap-3">
-                      <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-gradient-brand text-sm font-bold text-brand-foreground">
-                        {r.name.charAt(0)}
-                      </span>
-                      <div className="min-w-0">
-                        <p className="text-sm font-semibold text-foreground">{r.name}</p>
-                        <p className="flex items-center gap-1.5 text-xs text-muted-foreground">
-                          <span aria-hidden="true" className="text-base leading-none">
-                            {r.flag}
-                          </span>
-                          <span>{r.country}</span>
-                        </p>
-                      </div>
-                    </div>
-                    <div className="mt-3 flex items-center gap-2 text-xs text-muted-foreground">
-                      <span className="tracking-tight text-foreground">★★★★★</span>
-                      <span>5</span>
-                      <span>• {r.when}</span>
-                    </div>
-                    <p className="mt-3 text-sm leading-relaxed">“{r.text}”</p>
-                    <footer className="mt-4 grid grid-cols-2 gap-4 border-t border-border pt-3 text-xs sm:w-2/3">
-                      <div>
-                        <p className="font-semibold text-foreground">{r.price}</p>
-                        <p className="text-muted-foreground">Price</p>
-                      </div>
-                      <div>
-                        <p className="font-semibold text-foreground">{r.duration}</p>
-                        <p className="text-muted-foreground">Duration</p>
-                      </div>
-                    </footer>
-                  </blockquote>
-                ))}
-
-              </div>
-            </section>
-          )}
+          {tab === "Reviews" && <ReviewsPanel />}
 
           {tab === "Portfolio" && (
             <section className="surface-card p-6 md:p-8">

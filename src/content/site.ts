@@ -31,7 +31,7 @@ import teamFawazAsset from "@/assets/team-fawaz-new.png.asset.json";
 import teamHakeemAsset from "@/assets/team-hakeem.jpg.asset.json";
 import teamRosheedAsset from "@/assets/team-rosheed.jpg.asset.json";
 import teamQudusAsset from "@/assets/team-qudus.png.asset.json";
-import teamYunusAsset from "@/assets/team-yunus.png.asset.json";
+import teamYunusAsset from "@/assets/team-yunus-amamat.jpg.asset.json";
 import teamTeslimAsset from "@/assets/team-teslim.png.asset.json";
 import teamLukmanAsset from "@/assets/team-lukman.jpg.asset.json";
 
@@ -50,6 +50,11 @@ import svcAiVisibility from "@/assets/service-ai-visibility.jpg";
 import svcContentWriting from "@/assets/service-content-writing.jpg";
 import svcUgcVideo from "@/assets/service-ugc-video.jpg";
 import svcMarketplace from "@/assets/service-marketplace.jpg";
+import svcAeoGeo from "@/assets/service-aeo-geo.jpg";
+import svcMerchantListing from "@/assets/service-merchant-listing.jpg";
+import svcGoogleAds from "@/assets/service-google-ads.jpg";
+import svcEmailAutomation from "@/assets/service-email-automation.jpg";
+import svcCro from "@/assets/service-cro.jpg";
 
 // Portfolio images
 import workMerchant from "@/assets/work-merchant.jpg";
@@ -77,6 +82,13 @@ export const brand = {
   locations: "United States, United Kingdom & West Africa",
   languages: "English & French",
   responseTime: "Less than 1 hour",
+
+  // Live presence shown next to the logo (green dot + local time).
+  presence: {
+    fromLabel: "United States",
+    fromFlag: "us", // two-letter country code, used for the little flag image
+    timezone: "America/Chicago", // any IANA timezone name
+  },
 };
 
 export const contact = {
@@ -264,6 +276,56 @@ export const services = [
     returning: "22 returning clients",
     price: "$150 - $280",
   },
+  {
+    image: svcAeoGeo,
+    title: "AEO & GEO Services",
+    body: "Answer Engine and Generative Engine Optimisation so your brand is the one cited when shoppers ask AI assistants for recommendations.",
+    rating: "5.0",
+    reviews: "39",
+    experts: "3 specialists available",
+    returning: "16 returning clients",
+    price: "$300 - $650",
+  },
+  {
+    image: svcMerchantListing,
+    title: "Google Merchant Listing",
+    body: "Merchant Center setup, feed submission and disapproval clean-up so every product gets approved and stays live in Shopping.",
+    rating: "5.0",
+    reviews: "88",
+    experts: "4 specialists available",
+    returning: "35 returning clients",
+    price: "$150 - $320",
+  },
+  {
+    image: svcGoogleAds,
+    title: "Google Ads Setup",
+    body: "Search, Shopping and Performance Max campaigns built from scratch with conversion tracking, negatives and a bidding plan that protects margin.",
+    rating: "5.0",
+    reviews: "97",
+    experts: "5 specialists available",
+    returning: "41 returning clients",
+    price: "$220 - $480",
+  },
+  {
+    image: svcEmailAutomation,
+    title: "Email Marketing & Automation",
+    body: "Welcome, abandoned cart, post-purchase and win-back flows plus campaign calendars that turn one-time buyers into repeat revenue.",
+    rating: "5.0",
+    reviews: "112",
+    experts: "5 specialists available",
+    returning: "49 returning clients",
+    price: "$200 - $500",
+  },
+  {
+    image: svcCro,
+    title: "Conversion Rate Optimization (CRO)",
+    body: "Funnel analysis, A/B testing and page-level fixes that lift add-to-cart and checkout completion without spending more on traffic.",
+    rating: "5.0",
+    reviews: "126",
+    experts: "6 specialists available",
+    returning: "54 returning clients",
+    price: "$250 - $600",
+  },
 ];
 
 
@@ -421,7 +483,7 @@ export const team = [
     photo: teamFawazAsset.url,
     name: "Bawa Aliyu Fawaz",
     role: "Shopify & Frontend Engineering",
-    email: "smartuxtech@gmail.com",
+    email: "alwaysonalowkey@gmail.com",
     bio: "Builds and customises Shopify themes, handles integrations and keeps storefronts fast and stable.",
   },
   {
