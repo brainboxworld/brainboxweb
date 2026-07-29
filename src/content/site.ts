@@ -26,8 +26,15 @@ import shopifyPartner from "@/assets/shopify-partner.jpg.asset.json";
 
 // Team photos
 import teamAdam from "@/assets/team-adam.jpg";
-import teamFawaz from "@/assets/team-fawaz.jpg";
 import teamPlaceholder from "@/assets/team-placeholder.jpg";
+import teamFawazAsset from "@/assets/team-fawaz-new.png.asset.json";
+import teamHakeemAsset from "@/assets/team-hakeem.jpg.asset.json";
+import teamRosheedAsset from "@/assets/team-rosheed.jpg.asset.json";
+import teamQudusAsset from "@/assets/team-qudus.png.asset.json";
+import teamYunusAsset from "@/assets/team-yunus.png.asset.json";
+import teamTeslimAsset from "@/assets/team-teslim.png.asset.json";
+import teamLukmanAsset from "@/assets/team-lukman.jpg.asset.json";
+
 
 // Service images
 import svcStore from "@/assets/service-store-development.jpg";
