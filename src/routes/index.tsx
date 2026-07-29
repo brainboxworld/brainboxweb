@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { ReviewsPanel } from "@/components/ReviewsPanel";
 import {
   brand,
   contact,
@@ -10,9 +11,6 @@ import {
   services,
   servicesIntro,
   successRatings,
-  reviews,
-  reviewsIntro,
-  reviewSummary,
   portfolio,
   portfolioIntro,
   team,
@@ -24,6 +22,28 @@ import {
 
 const TABS = ["About", "Services", "Reviews", "Portfolio", "Team", "Contact"] as const;
 type Tab = (typeof TABS)[number];
+
+function LocalTime() {
+  const [now, setNow] = useState<string | null>(null);
+
+  useEffect(() => {
+    const tick = () =>
+      setNow(
+        new Intl.DateTimeFormat("en-US", {
+          hour: "numeric",
+          minute: "2-digit",
+          hour12: true,
+          timeZone: brand.presence.timezone,
+        }).format(new Date()),
+      );
+    tick();
+    const id = setInterval(tick, 30_000);
+    return () => clearInterval(id);
+  }, []);
+
+  if (!now) return null;
+  return <span>{now} local time</span>;
+}
 
 export const Route = createFileRoute("/")({
   head: () => ({
