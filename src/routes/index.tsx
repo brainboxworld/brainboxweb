@@ -346,76 +346,7 @@ function Index() {
             </>
           )}
 
-          {tab === "Reviews" && (
-            <section className="surface-card p-6 md:p-8">
-              <SectionHeader title="Client Reviews" intro={reviewsIntro} />
-
-              <div className="mt-6 grid gap-6 rounded-xl bg-muted p-5 md:grid-cols-[160px_1fr]">
-                <div className="text-center">
-                  <p className="text-4xl font-bold">{reviewSummary.average}</p>
-                  <p className="mt-1 text-xs text-muted-foreground">{reviewSummary.total}</p>
-                </div>
-                <div className="space-y-2">
-                  {reviewSummary.breakdown.map((b) => (
-                    <div key={b.stars} className="flex items-center gap-3 text-xs">
-                      <span className="w-4 font-medium">{b.stars}</span>
-                      <div className="h-2 flex-1 overflow-hidden rounded-full bg-background">
-                        <div
-                          className="h-full rounded-full bg-gradient-brand"
-                          style={{
-                            width: `${
-                              (b.count /
-                                reviewSummary.breakdown.reduce((a, c) => a + c.count, 0)) *
-                              100
-                            }%`,
-                          }}
-                        />
-                      </div>
-                      <span className="w-8 text-right text-muted-foreground">{b.count}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              <div className="mt-6 space-y-4">
-                {reviews.map((r) => (
-                  <blockquote key={r.name} className="rounded-xl border border-border p-5">
-                    <div className="flex items-center gap-3">
-                      <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-gradient-brand text-sm font-bold text-brand-foreground">
-                        {r.name.charAt(0)}
-                      </span>
-                      <div className="min-w-0">
-                        <p className="text-sm font-semibold text-foreground">{r.name}</p>
-                        <p className="flex items-center gap-1.5 text-xs text-muted-foreground">
-                          <span aria-hidden="true" className="text-base leading-none">
-                            {r.flag}
-                          </span>
-                          <span>{r.country}</span>
-                        </p>
-                      </div>
-                    </div>
-                    <div className="mt-3 flex items-center gap-2 text-xs text-muted-foreground">
-                      <span className="tracking-tight text-foreground">★★★★★</span>
-                      <span>5</span>
-                      <span>• {r.when}</span>
-                    </div>
-                    <p className="mt-3 text-sm leading-relaxed">“{r.text}”</p>
-                    <footer className="mt-4 grid grid-cols-2 gap-4 border-t border-border pt-3 text-xs sm:w-2/3">
-                      <div>
-                        <p className="font-semibold text-foreground">{r.price}</p>
-                        <p className="text-muted-foreground">Price</p>
-                      </div>
-                      <div>
-                        <p className="font-semibold text-foreground">{r.duration}</p>
-                        <p className="text-muted-foreground">Duration</p>
-                      </div>
-                    </footer>
-                  </blockquote>
-                ))}
-
-              </div>
-            </section>
-          )}
+          {tab === "Reviews" && <ReviewsPanel />}
 
           {tab === "Portfolio" && (
             <section className="surface-card p-6 md:p-8">
