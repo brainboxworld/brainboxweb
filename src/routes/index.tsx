@@ -145,14 +145,37 @@ function Index() {
         {/* Sidebar */}
         <aside className="space-y-4">
           <div className="surface-card p-5 text-center sm:p-6">
-
-            <img
-              src={brand.logo}
-              alt={`${brand.name} logo`}
-              width={768}
-              height={768}
-              className="mx-auto mt-4 h-28 w-28 rounded-full border border-border bg-card object-contain p-2"
-            />
+            <div className="relative mx-auto mt-2 w-28">
+              <img
+                src={brand.logo}
+                alt={`${brand.name} logo`}
+                width={768}
+                height={768}
+                className="h-28 w-28 rounded-full border border-border bg-card object-contain p-2"
+              />
+              <span className="absolute bottom-1 right-1 flex h-5 w-5 items-center justify-center rounded-full border-2 border-card bg-emerald-500">
+                <span className="sr-only">Online</span>
+              </span>
+            </div>
+            <p className="mt-2 flex flex-wrap items-center justify-center gap-x-2 gap-y-1 text-xs text-muted-foreground">
+              <span className="inline-flex items-center gap-1.5 font-medium text-emerald-600">
+                <span className="h-2 w-2 rounded-full bg-emerald-500" aria-hidden="true" />
+                Online
+              </span>
+              <span aria-hidden="true">•</span>
+              <span className="inline-flex items-center gap-1.5">
+                <img
+                  src={`https://flagcdn.com/w40/${brand.presence.fromFlag}.png`}
+                  alt=""
+                  width={20}
+                  height={14}
+                  className="h-3.5 w-5 rounded-[2px] object-cover"
+                />
+                From {brand.presence.fromLabel}
+              </span>
+              <span aria-hidden="true">•</span>
+              <LocalTime />
+            </p>
             <h1 className="mt-4 text-2xl font-bold tracking-tight">{brand.name}</h1>
             <p className="mt-1 text-sm text-muted-foreground">{brand.tagline}</p>
 
