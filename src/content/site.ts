@@ -36,17 +36,29 @@ import teamTeslimAsset from "@/assets/team-teslim.png.asset.json";
 import teamLukmanAsset from "@/assets/team-lukman.jpg.asset.json";
 
 
-// Service images
-import svcStore from "@/assets/service-store-development.jpg";
-import svcDropshipping from "@/assets/service-dropshipping.jpg";
-import svcOptimization from "@/assets/service-optimization.jpg";
-import svcSeo from "@/assets/service-seo.jpg";
-import svcListings from "@/assets/service-listings.jpg";
-import svcSocialShop from "@/assets/service-social-shop.jpg";
-import svcErrors from "@/assets/service-error-fixing.jpg";
-import svcSocialAds from "@/assets/service-social-ads.jpg";
-import svcSearchAds from "@/assets/service-search-ads.jpg";
-import svcAiVisibility from "@/assets/service-ai-visibility.jpg";
+// Service images (uploaded thumbnails are CDN assets — swap the file in src/assets/ to change)
+import svcStoreAsset from "@/assets/service-store-development.webp.asset.json";
+import svcDropshippingAsset from "@/assets/service-dropshipping.webp.asset.json";
+import svcOptimizationAsset from "@/assets/service-optimization.webp.asset.json";
+import svcSeoAsset from "@/assets/service-seo.webp.asset.json";
+import svcListingsAsset from "@/assets/service-listings.webp.asset.json";
+import svcSocialShopAsset from "@/assets/service-tiktok-shop.webp.asset.json";
+import svcErrorsAsset from "@/assets/service-error-fixing.webp.asset.json";
+import svcSocialAdsAsset from "@/assets/service-social-ads.webp.asset.json";
+import svcSearchAdsAsset from "@/assets/service-search-ads.webp.asset.json";
+import svcAiVisibilityAsset from "@/assets/service-ai-visibility.webp.asset.json";
+
+const svcStore = svcStoreAsset.url;
+const svcDropshipping = svcDropshippingAsset.url;
+const svcOptimization = svcOptimizationAsset.url;
+const svcSeo = svcSeoAsset.url;
+const svcListings = svcListingsAsset.url;
+const svcSocialShop = svcSocialShopAsset.url;
+const svcErrors = svcErrorsAsset.url;
+const svcSocialAds = svcSocialAdsAsset.url;
+const svcSearchAds = svcSearchAdsAsset.url;
+const svcAiVisibility = svcAiVisibilityAsset.url;
+
 import svcContentWriting from "@/assets/service-content-writing.jpg";
 import svcUgcVideo from "@/assets/service-ugc-video.jpg";
 import svcMarketplace from "@/assets/service-marketplace.jpg";
