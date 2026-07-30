@@ -310,7 +310,7 @@ export function ReviewsPanel() {
             disabled={loading}
             className="w-full rounded-lg border border-border px-6 py-2.5 text-sm font-semibold transition-colors hover:bg-muted disabled:opacity-60 sm:w-auto"
           >
-            {loading ? "Loading…" : `Load More Reviews (${total - rows.length} left)`}
+            {loading ? "Loading…" : "Load More Reviews"}
           </button>
         )}
         <button
