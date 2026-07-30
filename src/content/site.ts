@@ -161,6 +161,26 @@ export const services = [
   {
     image: svcStore,
     title: "Shopify Store Development",
+    details: {
+      overview:
+        "A complete, conversion-focused Shopify build. We plan the structure, design the pages, set up the theme and hand you a storefront that is fast, on-brand and ready to sell from day one.",
+      includes: [
+        "Brand-aligned theme setup and custom sections",
+        "Home, collection, product, cart and checkout page design",
+        "Mobile-first responsive layout",
+        "Essential app installation and configuration",
+        "Payment, shipping and tax setup",
+        "Speed and SEO basics baked in",
+        "Post-launch handover and training",
+      ],
+      process: [
+        "Discovery call and requirement mapping",
+        "Wireframe and design direction approval",
+        "Build, content upload and app setup",
+        "QA across devices, launch and handover",
+      ],
+      timeline: "7 - 21 days",
+    },
     body: "A complete storefront build: theme setup, custom sections, product pages and a checkout flow shaped around your brand.",
     rating: "5.0",
     reviews: "142",
@@ -171,6 +191,26 @@ export const services = [
   {
     image: svcDropshipping,
     title: "Dropshipping Store Creation",
+    details: {
+      overview:
+        "A ready-to-run dropshipping business: winning product research, verified suppliers, automated fulfilment and a storefront built to convert cold traffic.",
+      includes: [
+        "Niche and winning product research",
+        "Supplier sourcing and vetting",
+        "Full store build with trust elements",
+        "Automated order fulfilment setup",
+        "Shipping, refund and policy pages",
+        "Product imports with optimised copy",
+        "Launch checklist and scaling guidance",
+      ],
+      process: [
+        "Niche validation and product shortlist",
+        "Supplier connection and pricing strategy",
+        "Store build and automation setup",
+        "Test orders, launch and scaling plan",
+      ],
+      timeline: "5 - 14 days",
+    },
     body: "Product sourcing, supplier connections and automated fulfilment so orders move without manual work on your side.",
     rating: "5.0",
     reviews: "118",
@@ -181,6 +221,25 @@ export const services = [
   {
     image: svcOptimization,
     title: "Store Optimization",
+    details: {
+      overview:
+        "We remove every friction point between landing and checkout \u2014 speed, layout, mobile experience and conversion blockers get fixed and measured.",
+      includes: [
+        "Full store performance audit",
+        "Core Web Vitals and page speed work",
+        "Mobile experience optimisation",
+        "Layout, CTA and checkout refinements",
+        "App bloat and code clean-up",
+        "Before/after performance report",
+      ],
+      process: [
+        "Audit and prioritised fix list",
+        "Technical speed work",
+        "UX and conversion improvements",
+        "Verification report with metrics",
+      ],
+      timeline: "5 - 10 days",
+    },
     body: "Speed, mobile responsiveness and user-experience fixes that remove friction between landing and checkout.",
     rating: "5.0",
     reviews: "163",
@@ -191,6 +250,25 @@ export const services = [
   {
     image: svcSeo,
     title: "Store SEO",
+    details: {
+      overview:
+        "Technical and on-page SEO that gets your catalogue ranking for the terms buyers actually search, and keeps it there.",
+      includes: [
+        "Keyword and competitor research",
+        "On-page optimisation for products and collections",
+        "Metadata, headings and internal linking",
+        "Technical SEO and indexation fixes",
+        "Schema markup for rich results",
+        "Monthly ranking and traffic reporting",
+      ],
+      process: [
+        "SEO audit and keyword mapping",
+        "Technical fixes",
+        "On-page and content optimisation",
+        "Tracking, reporting and iteration",
+      ],
+      timeline: "14 - 30 days",
+    },
     body: "Keyword research, on-page structure, metadata and content work that helps your catalogue rank and stay ranked.",
     rating: "5.0",
     reviews: "96",
@@ -201,6 +279,24 @@ export const services = [
   {
     image: svcListings,
     title: "Product Listing",
+    details: {
+      overview:
+        "High-converting listings with search-friendly titles, persuasive descriptions, clean variants and organised collections.",
+      includes: [
+        "SEO-optimised titles and descriptions",
+        "Variant, SKU and inventory setup",
+        "Image cleanup and consistent formatting",
+        "Collection and tag organisation",
+        "Bulk uploads for large catalogues",
+      ],
+      process: [
+        "Catalogue review and template setup",
+        "Copywriting and keyword placement",
+        "Upload, variants and organisation",
+        "Final QA across the storefront",
+      ],
+      timeline: "2 - 7 days",
+    },
     body: "Clean, persuasive listings with search-friendly titles, structured variants and tidy collection organisation.",
     rating: "5.0",
     reviews: "174",
@@ -211,6 +307,25 @@ export const services = [
   {
     image: svcSocialShop,
     title: "TikTok Shop Setup",
+    details: {
+      overview:
+        "Full TikTok Shop setup and optimisation so you can sell directly to the platform's audience with compliant, synced listings.",
+      includes: [
+        "Shop registration and verification",
+        "Business account and payment integration",
+        "Catalogue sync with Shopify",
+        "SEO-friendly product listings",
+        "Shipping templates and order routing",
+        "Compliance and policy checks",
+      ],
+      process: [
+        "Account verification and setup",
+        "Catalogue integration",
+        "Listing optimisation",
+        "Test order and go live",
+      ],
+      timeline: "3 - 10 days",
+    },
     body: "Connect your catalogue to TikTok Shop and get social commerce running with correct syncing and order routing.",
     rating: "5.0",
     reviews: "74",
@@ -221,6 +336,25 @@ export const services = [
   {
     image: svcErrors,
     title: "Error Fixing",
+    details: {
+      overview:
+        "Fast diagnosis and repair for broken themes, liquid errors, app conflicts and checkout failures \u2014 with prevention built in.",
+      includes: [
+        "Root-cause error diagnosis",
+        "Theme and liquid code fixes",
+        "App conflict resolution",
+        "Checkout and cart repairs",
+        "Mobile and speed issue fixes",
+        "Post-fix stability report",
+      ],
+      process: [
+        "Report the issue and grant access",
+        "Diagnosis and quote",
+        "Fix, test and verify",
+        "Prevention notes and handover",
+      ],
+      timeline: "24 hours - 5 days",
+    },
     body: "Troubleshooting for broken themes, conflicting apps, liquid errors and checkout issues — diagnosed and repaired.",
     rating: "5.0",
     reviews: "131",
@@ -231,6 +365,25 @@ export const services = [
   {
     image: svcSocialAds,
     title: "Facebook & Instagram Ads",
+    details: {
+      overview:
+        "Strategic Meta campaigns \u2014 creative, targeting and daily management \u2014 built around profitable return on ad spend.",
+      includes: [
+        "Pixel, CAPI and event tracking setup",
+        "Audience research and targeting",
+        "Scroll-stopping creative and copy",
+        "Campaign build: awareness to retargeting",
+        "Daily optimisation and scaling",
+        "Transparent weekly reporting",
+      ],
+      process: [
+        "Account audit and tracking setup",
+        "Creative and audience strategy",
+        "Launch and testing phase",
+        "Optimisation and scaling",
+      ],
+      timeline: "Ongoing monthly",
+    },
     body: "Creative, audience targeting and daily campaign management aimed at profitable return on ad spend.",
     rating: "5.0",
     reviews: "108",
@@ -241,6 +394,25 @@ export const services = [
   {
     image: svcSearchAds,
     title: "Pinterest & Google Ads",
+    details: {
+      overview:
+        "Search and discovery campaigns with clean feeds, disciplined bidding and reporting you can actually read.",
+      includes: [
+        "Keyword and Pinterest interest research",
+        "Product feed setup and optimisation",
+        "Search, Shopping and Pin campaigns",
+        "Bidding strategy and budget control",
+        "Conversion tracking",
+        "Monthly performance reporting",
+      ],
+      process: [
+        "Account and feed audit",
+        "Campaign structure and setup",
+        "Launch and test period",
+        "Optimisation and reporting",
+      ],
+      timeline: "Ongoing monthly",
+    },
     body: "Search and discovery campaigns with feed management, bidding strategy and clear monthly reporting.",
     rating: "5.0",
     reviews: "82",
@@ -251,6 +423,25 @@ export const services = [
   {
     image: svcAiVisibility,
     title: "AI Visibility",
+    details: {
+      overview:
+        "Get discovered, recognised and recommended by ChatGPT, Gemini, Claude, Perplexity and Google AI when shoppers ask for products like yours.",
+      includes: [
+        "AI search optimisation for your content",
+        "LLM visibility and mention building",
+        "AI-friendly, citable content creation",
+        "Structured data and entity clean-up",
+        "Authority and trust signal building",
+        "Visibility tracking and monthly insights",
+      ],
+      process: [
+        "Baseline AI visibility audit",
+        "Content and structured data work",
+        "Authority and mention building",
+        "Monitoring and continuous improvement",
+      ],
+      timeline: "30 - 60 days",
+    },
     body: "Get your brand surfaced by AI assistants and answer engines with structured data, entity clean-up and AI-ready product content.",
     rating: "5.0",
     reviews: "48",
@@ -261,6 +452,24 @@ export const services = [
   {
     image: svcContentWriting,
     title: "Content Writing",
+    details: {
+      overview:
+        "Copy that ranks and persuades: product descriptions, collections, blogs and landing pages written for your buyer.",
+      includes: [
+        "Product and collection descriptions",
+        "Landing page and homepage copy",
+        "Blog articles with keyword targeting",
+        "Brand tone and messaging guide",
+        "Editing and optimisation of existing copy",
+      ],
+      process: [
+        "Brand voice and keyword brief",
+        "First draft",
+        "Revision round",
+        "Final delivery and upload",
+      ],
+      timeline: "3 - 10 days",
+    },
     body: "Product descriptions, collection copy, blogs and landing page writing built to rank and to persuade shoppers.",
     rating: "5.0",
     reviews: "91",
@@ -271,6 +480,24 @@ export const services = [
   {
     image: svcUgcVideo,
     title: "UGC & AI Video Creation",
+    details: {
+      overview:
+        "Creator-style and AI-generated product videos made for TikTok, Reels and paid social testing.",
+      includes: [
+        "Scripting and hook development",
+        "UGC-style creator videos",
+        "AI-generated video ad variations",
+        "Captions, edits and platform formatting",
+        "Multiple hooks for ad testing",
+      ],
+      process: [
+        "Brief and script approval",
+        "Filming or AI generation",
+        "Editing and revisions",
+        "Delivery in all required formats",
+      ],
+      timeline: "5 - 12 days",
+    },
     body: "Creator-style product videos and AI-generated ad cuts made for TikTok, Reels and paid social testing.",
     rating: "5.0",
     reviews: "64",
@@ -281,6 +508,24 @@ export const services = [
   {
     image: svcMarketplace,
     title: "Facebook Marketplace Setup",
+    details: {
+      overview:
+        "Marketplace and Facebook Shop setup with synced catalogues, optimised listings and order routing that works.",
+      includes: [
+        "Commerce Manager and Shop setup",
+        "Catalogue sync and feed management",
+        "Listing optimisation for reach",
+        "Order routing and fulfilment flow",
+        "Policy compliance review",
+      ],
+      process: [
+        "Account and catalogue review",
+        "Shop and feed setup",
+        "Listing optimisation",
+        "Test order and launch",
+      ],
+      timeline: "3 - 7 days",
+    },
     body: "Marketplace and Facebook Shop setup with catalogue syncing, listing optimisation and order routing that works.",
     rating: "5.0",
     reviews: "57",
@@ -291,6 +536,25 @@ export const services = [
   {
     image: svcAeoGeo,
     title: "AEO & GEO Services",
+    details: {
+      overview:
+        "Answer Engine and Generative Engine Optimisation so your brand is the one cited when AI assistants recommend products.",
+      includes: [
+        "Answer-engine content structuring",
+        "Generative engine visibility strategy",
+        "FAQ and entity schema implementation",
+        "Citation and mention acquisition",
+        "Competitor AI-share analysis",
+        "Ongoing visibility reporting",
+      ],
+      process: [
+        "AI-share baseline audit",
+        "Content restructuring",
+        "Schema and entity work",
+        "Tracking and iteration",
+      ],
+      timeline: "30 - 60 days",
+    },
     body: "Answer Engine and Generative Engine Optimisation so your brand is the one cited when shoppers ask AI assistants for recommendations.",
     rating: "5.0",
     reviews: "39",
@@ -301,6 +565,25 @@ export const services = [
   {
     image: svcMerchantListing,
     title: "Google Merchant Listing",
+    details: {
+      overview:
+        "Merchant Center setup, feed submission and disapproval clean-up so every product gets approved and stays live in Shopping.",
+      includes: [
+        "Merchant Center account setup",
+        "Product feed creation and submission",
+        "Disapproval and suspension fixes",
+        "Feed rules and attribute optimisation",
+        "Free listings activation",
+        "Ongoing feed health monitoring",
+      ],
+      process: [
+        "Account and feed audit",
+        "Setup or clean-up",
+        "Submission and approval",
+        "Monitoring and maintenance",
+      ],
+      timeline: "3 - 10 days",
+    },
     body: "Merchant Center setup, feed submission and disapproval clean-up so every product gets approved and stays live in Shopping.",
     rating: "5.0",
     reviews: "88",
@@ -311,6 +594,25 @@ export const services = [
   {
     image: svcGoogleAds,
     title: "Google Ads Setup",
+    details: {
+      overview:
+        "Search, Shopping and Performance Max campaigns built from scratch with tracking, negatives and a bidding plan that protects margin.",
+      includes: [
+        "Conversion tracking and GA4 setup",
+        "Keyword research and negatives list",
+        "Search, Shopping and PMax campaigns",
+        "Ad copy and asset creation",
+        "Bidding and budget strategy",
+        "Reporting dashboard",
+      ],
+      process: [
+        "Account audit and tracking",
+        "Campaign build",
+        "Launch and learning phase",
+        "Optimisation and scaling",
+      ],
+      timeline: "Ongoing monthly",
+    },
     body: "Search, Shopping and Performance Max campaigns built from scratch with conversion tracking, negatives and a bidding plan that protects margin.",
     rating: "5.0",
     reviews: "97",
@@ -321,6 +623,25 @@ export const services = [
   {
     image: svcEmailAutomation,
     title: "Email Marketing & Automation",
+    details: {
+      overview:
+        "Flows and campaigns that turn one-time buyers into repeat revenue \u2014 welcome, abandoned cart, post-purchase and win-back.",
+      includes: [
+        "Klaviyo or equivalent setup",
+        "Welcome and abandoned cart flows",
+        "Post-purchase and win-back flows",
+        "Segmentation and list hygiene",
+        "Branded email templates",
+        "Monthly campaign calendar",
+      ],
+      process: [
+        "Account setup and audit",
+        "Flow build and design",
+        "Testing and activation",
+        "Campaigns and reporting",
+      ],
+      timeline: "7 - 21 days",
+    },
     body: "Welcome, abandoned cart, post-purchase and win-back flows plus campaign calendars that turn one-time buyers into repeat revenue.",
     rating: "5.0",
     reviews: "112",
@@ -331,6 +652,25 @@ export const services = [
   {
     image: svcCro,
     title: "Conversion Rate Optimization (CRO)",
+    details: {
+      overview:
+        "Funnel analysis, testing and page-level fixes that lift add-to-cart and checkout completion without spending more on traffic.",
+      includes: [
+        "Full funnel and analytics audit",
+        "Heatmap and session recording setup",
+        "A/B test plan and execution",
+        "Product and checkout page redesigns",
+        "Trust, urgency and offer optimisation",
+        "Results report with uplift data",
+      ],
+      process: [
+        "Data collection and audit",
+        "Hypothesis and test plan",
+        "Implementation and testing",
+        "Results review and next round",
+      ],
+      timeline: "14 - 45 days",
+    },
     body: "Funnel analysis, A/B testing and page-level fixes that lift add-to-cart and checkout completion without spending more on traffic.",
     rating: "5.0",
     reviews: "126",
