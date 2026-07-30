@@ -116,6 +116,7 @@ function SectionHeader({ title, intro }: { title: string; intro?: string }) {
 
 function Index() {
   const [tab, setTab] = useState<Tab>("About");
+  const [openService, setOpenService] = useState<(typeof services)[number] | null>(null);
 
   return (
     <div className="min-h-screen bg-background">
