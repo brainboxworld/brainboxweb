@@ -120,27 +120,16 @@ function Index() {
 
   return (
     <div className="min-h-screen bg-background">
-      <div className="border-b border-border bg-card">
-        <div className="mx-auto flex max-w-6xl items-center justify-center px-4 py-3">
-          <img
-            src={brand.shopifyPartnerBadge}
-            alt="Shopify Partner"
-            width={556}
-            height={200}
-            className="h-8 w-auto max-w-full object-contain sm:h-10"
-          />
-        </div>
-      </div>
-
-      <div className="relative h-36 w-full overflow-hidden sm:h-44 md:h-60">
+      <div className="relative w-full overflow-hidden border-b border-border bg-card">
         <img
-          src={brand.banner}
-          alt={`${brand.name} eCommerce agency banner`}
+          src={brand.shopifyPartnerBadge}
+          alt={`${brand.name} — Shopify Partner`}
           width={1920}
           height={640}
-          className="h-full w-full object-cover"
+          className="h-32 w-full object-cover sm:h-44 md:h-60"
         />
       </div>
+
 
       <div className="mx-auto grid max-w-6xl gap-6 px-3 py-6 sm:px-4 sm:py-8 lg:grid-cols-[320px_1fr]">
         {/* Sidebar */}
