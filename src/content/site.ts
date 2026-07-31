@@ -73,7 +73,7 @@ export const brand = {
   logo,
   banner,
   partnerBadge,
-  shopifyPartnerBadge: shopifyPartner.url,
+  shopifyPartnerBadge: shopifyPartner,
   partnerBadgeLabel: "Shopify Partner",
 
   rating: "5.0",
