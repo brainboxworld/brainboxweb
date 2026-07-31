@@ -680,12 +680,12 @@ export const reviewsIntro =
 
 export const reviewSummary = {
   average: "4.9",
-  total: "990 reviews",
+  total: "1,024 reviews",
   breakdown: [
-    { stars: 5, count: 938 },
-    { stars: 4, count: 41 },
-    { stars: 3, count: 7 },
-    { stars: 2, count: 2 },
+    { stars: 5, count: 968 },
+    { stars: 4, count: 44 },
+    { stars: 3, count: 8 },
+    { stars: 2, count: 3 },
     { stars: 1, count: 1 },
   ],
 };
