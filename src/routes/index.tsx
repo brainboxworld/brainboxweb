@@ -117,30 +117,23 @@ function SectionHeader({ title, intro }: { title: string; intro?: string }) {
 function Index() {
   const [tab, setTab] = useState<Tab>("About");
   const [openService, setOpenService] = useState<(typeof services)[number] | null>(null);
+  const [showAllSkills, setShowAllSkills] = useState(false);
 
   return (
     <div className="min-h-screen bg-background">
-      <div className="border-b border-border bg-card">
-        <div className="mx-auto flex max-w-6xl items-center justify-center px-4 py-3">
+      <div className="w-full border-b border-border bg-white">
+        <div className="mx-auto flex max-w-6xl items-center justify-center px-4 py-6 sm:py-10 md:py-14">
           <img
             src={brand.shopifyPartnerBadge}
-            alt="Shopify Partner"
+            alt={`${brand.name} — Shopify Partner`}
             width={556}
             height={200}
-            className="h-8 w-auto max-w-full object-contain sm:h-10"
+            className="h-16 w-auto max-w-full object-contain sm:h-24 md:h-32"
           />
         </div>
       </div>
 
-      <div className="relative h-36 w-full overflow-hidden sm:h-44 md:h-60">
-        <img
-          src={brand.banner}
-          alt={`${brand.name} eCommerce agency banner`}
-          width={1920}
-          height={640}
-          className="h-full w-full object-cover"
-        />
-      </div>
+
 
       <div className="mx-auto grid max-w-6xl gap-6 px-3 py-6 sm:px-4 sm:py-8 lg:grid-cols-[320px_1fr]">
         {/* Sidebar */}
@@ -277,7 +270,7 @@ function Index() {
               <section className="surface-card p-6 md:p-8">
                 <h2 className="text-xl font-semibold tracking-tight">Skills & Expertise</h2>
                 <ul className="mt-4 flex flex-wrap gap-2">
-                  {skills.map((s) => (
+                  {(showAllSkills ? skills : skills.slice(0, 8)).map((s) => (
                     <li
                       key={s}
                       className="rounded-full bg-muted px-3 py-1.5 text-xs font-medium text-secondary-foreground"
@@ -286,6 +279,15 @@ function Index() {
                     </li>
                   ))}
                 </ul>
+                {skills.length > 8 && (
+                  <button
+                    type="button"
+                    onClick={() => setShowAllSkills((v) => !v)}
+                    className="mt-4 rounded-lg border border-border px-4 py-2 text-xs font-semibold transition-colors hover:bg-muted"
+                  >
+                    {showAllSkills ? "Show fewer skills" : `Show all ${skills.length} skills`}
+                  </button>
+                )}
               </section>
 
               <section className="surface-card p-6 md:p-8">
@@ -518,23 +520,36 @@ function Index() {
                     key={m.name}
                     className="overflow-hidden rounded-xl border border-border text-center"
                   >
-                    <img
-                      src={m.photo}
-                      alt={`${m.name} — ${m.role}`}
-                      width={512}
-                      height={640}
-                      loading="lazy"
-                      className="h-56 w-full object-cover object-top"
-                    />
+                    <div className="aspect-[4/5] w-full overflow-hidden bg-muted sm:aspect-[3/4]">
+                      <img
+                        src={m.photo}
+                        alt={`${m.name} — ${m.role}`}
+                        width={512}
+                        height={640}
+                        loading="lazy"
+                        className="h-full w-full object-cover object-top"
+                      />
+                    </div>
                     <div className="p-5">
                       <h3 className="font-semibold">{m.name}</h3>
                       <p className="mt-1 text-xs font-medium text-primary">{m.role}</p>
-                      <a
-                        href={`mailto:${m.email}`}
-                        className="mt-2 block break-all text-xs text-muted-foreground hover:underline"
-                      >
-                        {m.email}
-                      </a>
+                      {m.website ? (
+                        <a
+                          href={m.website}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="mt-3 inline-flex items-center justify-center rounded-lg bg-gradient-brand px-4 py-2 text-xs font-semibold text-brand-foreground transition-opacity hover:opacity-90"
+                        >
+                          Visit website
+                        </a>
+                      ) : m.email ? (
+                        <a
+                          href={`mailto:${m.email}`}
+                          className="mt-2 block break-all text-xs text-muted-foreground hover:underline"
+                        >
+                          {m.email}
+                        </a>
+                      ) : null}
                       <p className="mt-3 text-xs leading-relaxed text-muted-foreground">{m.bio}</p>
                     </div>
                   </article>

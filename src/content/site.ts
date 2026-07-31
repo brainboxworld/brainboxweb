@@ -19,14 +19,16 @@
  * ─────────────────────────────────────────────────────────────
  */
 
-import logo from "@/assets/brainboxworld-logo.png";
+import logoAsset from "@/assets/brainboxworld-logo-new.png.asset.json";
+
+const logo = logoAsset.url;
 import banner from "@/assets/brainboxworld-banner.jpg";
 import partnerBadge from "@/assets/partner-badge.png";
 import shopifyPartner from "@/assets/shopify-partner.jpg.asset.json";
 
 // Team photos
 import teamAdam from "@/assets/team-adam.jpg";
-import teamPlaceholder from "@/assets/team-placeholder.jpg";
+import teamMubaraqAsset from "@/assets/team-mubaraq.jpg.asset.json";
 import teamFawazAsset from "@/assets/team-fawaz-new.png.asset.json";
 import teamHakeemAsset from "@/assets/team-hakeem.jpg.asset.json";
 import teamRosheedAsset from "@/assets/team-rosheed.jpg.asset.json";
@@ -90,7 +92,7 @@ export const brand = {
   partnerBadgeLabel: "Shopify Partner",
 
   rating: "5.0",
-  reviewCount: "810 reviews",
+  reviewCount: "990 reviews",
   locations: "United States, United Kingdom & West Africa",
   languages: "English & French",
   responseTime: "Less than 1 hour",
@@ -693,10 +695,10 @@ export const reviewsIntro =
 
 export const reviewSummary = {
   average: "4.9",
-  total: "810 reviews",
+  total: "990 reviews",
   breakdown: [
-    { stars: 5, count: 768 },
-    { stars: 4, count: 32 },
+    { stars: 5, count: 938 },
+    { stars: 4, count: 41 },
     { stars: 3, count: 7 },
     { stars: 2, count: 2 },
     { stars: 1, count: 1 },
@@ -828,14 +830,14 @@ export const team = [
     photo: teamAdam,
     name: "Bawa Aliyu Adam",
     role: "Founder & Lead Strategist",
-    email: "info@brainboxworld.dedyn.io",
+    website: "https://www.brainboxworld.dedyn.io",
     bio: "Leads strategy and client delivery, with years of experience taking eCommerce brands from first build to steady growth.",
   },
   {
     photo: teamFawazAsset.url,
     name: "Bawa Aliyu Fawaz",
     role: "Shopify & Frontend Engineering",
-    email: "alwaysonalowkey@gmail.com",
+    website: "https://thelowkey.dedyn.io",
     bio: "Builds and customises Shopify themes, handles integrations and keeps storefronts fast and stable.",
   },
   {
@@ -856,35 +858,35 @@ export const team = [
     photo: teamQudusAsset.url,
     name: "Yusuf Abdul Qudus",
     role: "Social Media Manager & Marketing Expert",
-    email: "hiluxetech@gmail.com",
+    website: "https://www.hilluxetech.dedyn.io",
     bio: "Specializes in creating engaging social media campaigns across Facebook, Instagram, TikTok and Pinterest for maximum brand visibility.",
   },
   {
-    photo: teamPlaceholder,
+    photo: teamMubaraqAsset.url,
     name: "Sulyman Mubaraq",
     role: "Google Developer & SEO Specialist",
-    email: "info.theheroesagency@gmail.com",
+    website: "https://theheroesagency.vercel.app",
     bio: "Google certified developer focusing on technical SEO, Google Ads optimization and search engine ranking improvement.",
   },
   {
     photo: teamYunusAsset.url,
     name: "Yunus Amamat",
     role: "Backend Developer & Technical Optimization Specialist",
-    email: "triumphproagency@gmail.com",
+    website: "https://www.triumphagency.dedyn.io",
     bio: "Backend expert handling complex integrations, app development and technical optimizations for high-performance stores.",
   },
   {
     photo: teamTeslimAsset.url,
     name: "Muhammed Teslim",
     role: "Content Marketing & SEO Specialist",
-    email: "theonlypeaceexpert@gmail.com",
+    website: "https://www.deepeaceagency.dedyn.io",
     bio: "Content strategist and SEO expert creating compelling content that ranks well and converts visitors into customers.",
   },
   {
     photo: teamLukmanAsset.url,
     name: "Soliu Lukman",
     role: "UGC & AI Video Specialist",
-    email: "mrbrightugc@gmail.com",
+    website: "https://www.brightugc.dedyn.io",
     bio: "Produces creator-style UGC and AI-generated video ads that give products scroll-stopping presence on social.",
   },
 
