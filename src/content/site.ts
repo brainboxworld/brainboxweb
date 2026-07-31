@@ -28,7 +28,6 @@ import shopifyPartner from "@/assets/shopify-partner.jpg.asset.json";
 
 // Team photos
 import teamAdam from "@/assets/team-adam.jpg";
-import teamPlaceholder from "@/assets/team-placeholder.jpg";
 import teamMubaraqAsset from "@/assets/team-mubaraq.jpg.asset.json";
 import teamFawazAsset from "@/assets/team-fawaz-new.png.asset.json";
 import teamHakeemAsset from "@/assets/team-hakeem.jpg.asset.json";
