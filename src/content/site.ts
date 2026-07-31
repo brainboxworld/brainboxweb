@@ -19,56 +19,41 @@
  * ─────────────────────────────────────────────────────────────
  */
 
-import logoAsset from "@/assets/brainboxworld-logo-new.png.asset.json";
-
-const logo = logoAsset.url;
+import logo from "@/assets/brainboxworld-logo-new.png";
 import banner from "@/assets/brainboxworld-banner.jpg";
 import partnerBadge from "@/assets/partner-badge.png";
-import shopifyPartner from "@/assets/shopify-partner.jpg.asset.json";
+import shopifyPartner from "@/assets/shopify-partner.jpg";
 
 // Team photos
 import teamAdam from "@/assets/team-adam.jpg";
-import teamMubaraqAsset from "@/assets/team-mubaraq.jpg.asset.json";
-import teamFawazAsset from "@/assets/team-fawaz-new.png.asset.json";
-import teamHakeemAsset from "@/assets/team-hakeem.jpg.asset.json";
-import teamRosheedAsset from "@/assets/team-rosheed.jpg.asset.json";
-import teamQudusAsset from "@/assets/team-qudus.png.asset.json";
-import teamYunusAsset from "@/assets/team-yunus-amamat.jpg.asset.json";
-import teamTeslimAsset from "@/assets/team-teslim.png.asset.json";
-import teamLukmanAsset from "@/assets/team-lukman.jpg.asset.json";
+import teamMubaraq from "@/assets/team-mubaraq.jpg";
+import teamFawaz from "@/assets/team-fawaz-new.png";
+import teamHakeem from "@/assets/team-hakeem.jpg";
+import teamRosheed from "@/assets/team-rosheed.jpg";
+import teamQudus from "@/assets/team-qudus.png";
+import teamYunus from "@/assets/team-yunus-amamat.jpg";
+import teamTeslim from "@/assets/team-teslim.png";
+import teamLukman from "@/assets/team-lukman.jpg";
 
-
-// Service images (uploaded thumbnails are CDN assets — swap the file in src/assets/ to change)
-import svcStoreAsset from "@/assets/service-store-development.webp.asset.json";
-import svcDropshippingAsset from "@/assets/service-dropshipping.webp.asset.json";
-import svcOptimizationAsset from "@/assets/service-optimization.webp.asset.json";
-import svcSeoAsset from "@/assets/service-seo.webp.asset.json";
-import svcListingsAsset from "@/assets/service-listings.webp.asset.json";
-import svcSocialShopAsset from "@/assets/service-tiktok-shop.webp.asset.json";
-import svcErrorsAsset from "@/assets/service-error-fixing.webp.asset.json";
-import svcSocialAdsAsset from "@/assets/service-social-ads.webp.asset.json";
-import svcSearchAdsAsset from "@/assets/service-search-ads.webp.asset.json";
-import svcAiVisibilityAsset from "@/assets/service-ai-visibility.webp.asset.json";
-
-const svcStore = svcStoreAsset.url;
-const svcDropshipping = svcDropshippingAsset.url;
-const svcOptimization = svcOptimizationAsset.url;
-const svcSeo = svcSeoAsset.url;
-const svcListings = svcListingsAsset.url;
-const svcSocialShop = svcSocialShopAsset.url;
-const svcErrors = svcErrorsAsset.url;
-const svcSocialAds = svcSocialAdsAsset.url;
-const svcSearchAds = svcSearchAdsAsset.url;
-const svcAiVisibility = svcAiVisibilityAsset.url;
-
-import svcContentWriting from "@/assets/service-content-writing.jpg";
-import svcUgcVideo from "@/assets/service-ugc-video.jpg";
-import svcMarketplace from "@/assets/service-marketplace.jpg";
-import svcAeoGeo from "@/assets/service-aeo-geo.jpg";
-import svcMerchantListing from "@/assets/service-merchant-listing.jpg";
-import svcGoogleAds from "@/assets/service-google-ads.jpg";
-import svcEmailAutomation from "@/assets/service-email-automation.jpg";
-import svcCro from "@/assets/service-cro.jpg";
+// Service images (swap the file in src/assets/ to change a thumbnail)
+import svcStore from "@/assets/service-store-development.webp";
+import svcDropshipping from "@/assets/service-dropshipping.webp";
+import svcOptimization from "@/assets/service-optimization.webp";
+import svcSeo from "@/assets/service-seo.webp";
+import svcListings from "@/assets/service-listings.webp";
+import svcSocialShop from "@/assets/service-tiktok-shop.webp";
+import svcErrors from "@/assets/service-error-fixing.webp";
+import svcSocialAds from "@/assets/service-social-ads.webp";
+import svcSearchAds from "@/assets/service-search-ads.webp";
+import svcAiVisibility from "@/assets/service-ai-visibility.webp";
+import svcContentWriting from "@/assets/service-content-writing.png";
+import svcUgcVideo from "@/assets/service-ugc-video.png";
+import svcMarketplace from "@/assets/service-marketplace.png";
+import svcAeoGeo from "@/assets/service-aeo-geo.png";
+import svcMerchantListing from "@/assets/service-merchant-listing.png";
+import svcGoogleAds from "@/assets/service-google-ads.png";
+import svcEmailAutomation from "@/assets/service-email-automation.png";
+import svcCro from "@/assets/service-cro.png";
 
 // Portfolio images
 import workMerchant from "@/assets/work-merchant.jpg";
