@@ -882,5 +882,5 @@ export const contactIntro =
   "Before starting a project with any of our experts, talk to our team. We will answer your questions and point you to the right solution for your store.";
 
 export const footer = {
-  text: `© ${new Date().getFullYear()} Brainboxworld. All rights reserved.`,
+  text: "© 2026 Brainboxworld. All rights reserved.",
 };
