@@ -216,27 +216,6 @@ function Index() {
             </button>
           </div>
 
-          <div className="surface-card p-6">
-            <h2 className="text-sm font-semibold uppercase tracking-wide text-muted-foreground">
-              Follow us
-            </h2>
-            <div className="mt-3 flex flex-wrap justify-center gap-2">
-              {socials.map((s) => (
-                <a
-                  key={s.label}
-                  href={s.href}
-                  target="_blank"
-                  rel="noreferrer"
-                  title={s.label}
-                  aria-label={s.label}
-                  className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-border text-foreground transition-colors hover:bg-gradient-brand hover:text-brand-foreground"
-                >
-                  <SocialIcon name={s.icon} />
-                </a>
-              ))}
-            </div>
-
-          </div>
         </aside>
 
         {/* Main */}
@@ -559,6 +538,25 @@ function Index() {
           )}
 
           {tab === "Contact" && <ContactPanel />}
+
+          <section className="surface-card p-6 md:p-8">
+            <h2 className="text-xl font-semibold tracking-tight">Follow us</h2>
+            <div className="mt-4 flex flex-wrap gap-3">
+              {socials.map((s) => (
+                <a
+                  key={s.label}
+                  href={s.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  title={s.label}
+                  aria-label={s.label}
+                  className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-border text-foreground transition-colors hover:bg-gradient-brand hover:text-brand-foreground"
+                >
+                  <SocialIcon name={s.icon} />
+                </a>
+              ))}
+            </div>
+          </section>
         </main>
       </div>
 
@@ -700,25 +698,6 @@ function ContactPanel() {
         </a>
       </section>
 
-      <section className="surface-card p-6 md:p-8">
-        <h2 className="text-xl font-semibold tracking-tight">Follow us</h2>
-        <div className="mt-4 flex flex-wrap gap-3">
-          {socials.map((s) => (
-            <a
-              key={s.label}
-              href={s.href}
-              target="_blank"
-              rel="noreferrer"
-              title={s.label}
-              aria-label={s.label}
-              className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-border text-foreground transition-colors hover:bg-gradient-brand hover:text-brand-foreground"
-            >
-              <SocialIcon name={s.icon} />
-            </a>
-          ))}
-        </div>
-
-      </section>
     </div>
   );
 }
