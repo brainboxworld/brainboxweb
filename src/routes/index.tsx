@@ -1,6 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { ReviewsPanel } from "@/components/ReviewsPanel";
+import { flagUrl } from "@/lib/reviews";
+
 import {
   brand,
   contact,
@@ -486,10 +488,22 @@ function Index() {
                 </h3>
                 <ul className="mt-3 flex flex-wrap gap-3 text-sm">
                   {teamLocations.map((l) => (
-                    <li key={l.label} className="rounded-full bg-background px-3 py-1.5">
-                      {l.flag} {l.label}
+                    <li
+                      key={l.label}
+                      className="flex items-center gap-2 rounded-full bg-background px-3 py-1.5"
+                    >
+                      <img
+                        src={flagUrl(l.code)}
+                        alt=""
+                        width={20}
+                        height={14}
+                        loading="lazy"
+                        className="h-3.5 w-5 shrink-0 rounded-[2px] object-cover"
+                      />
+                      <span>{l.label}</span>
                     </li>
                   ))}
+
                 </ul>
               </div>
 

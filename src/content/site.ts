@@ -10,7 +10,7 @@
  *             then change the import line at the top of this file
  *             (keep the same name on the left of "from").
  *             Example:
- *               import teamAdam from "@/assets/team-adam.jpg";
+ *               import teamAdam from "@/assets/team-adam-new.jpg";
  *             becomes
  *               import teamAdam from "@/assets/my-new-photo.jpg";
  *
@@ -24,15 +24,24 @@ import banner from "@/assets/brainboxworld-banner.jpg";
 import partnerBadge from "@/assets/partner-badge.png";
 import shopifyPartner from "@/assets/shopify-partner.jpg";
 
+// Portfolio proof images
+import workSeoAudit from "@/assets/work-seo-audit.png";
+import workPagespeed from "@/assets/work-pagespeed.png";
+import workMerchantApproval from "@/assets/work-merchant-approval.png";
+import workBrokenLinks from "@/assets/work-broken-links.png";
+import workSitemap from "@/assets/work-sitemap.jpg";
+import workOwnership from "@/assets/work-ownership.jpg";
+import workProductSeo from "@/assets/work-product-seo.png";
+
 // Team photos
-import teamAdam from "@/assets/team-adam.jpg";
+import teamAdam from "@/assets/team-adam-new.jpg";
 import teamMubaraq from "@/assets/team-mubaraq.jpg";
 import teamFawaz from "@/assets/team-fawaz-new.png";
 import teamHakeem from "@/assets/team-hakeem.jpg";
-import teamRosheed from "@/assets/team-rosheed.jpg";
+import teamBashit from "@/assets/team-bashit.jpg";
 import teamQudus from "@/assets/team-qudus.png";
 import teamYunus from "@/assets/team-yunus-amamat.jpg";
-import teamTeslim from "@/assets/team-teslim.png";
+import teamTeslim from "@/assets/team-teslim-new.jpg";
 import teamLukman from "@/assets/team-lukman.jpg";
 
 // Service images (swap the file in src/assets/ to change a thumbnail)
@@ -77,7 +86,7 @@ export const brand = {
   partnerBadgeLabel: "Shopify Partner",
 
   rating: "5.0",
-  reviewCount: "990 reviews",
+  reviewCount: "1,024 reviews",
   locations: "United States, United Kingdom & West Africa",
   languages: "English & French",
   responseTime: "Less than 1 hour",
@@ -752,6 +761,62 @@ export const portfolioIntro =
 
 export const portfolio = [
   {
+    image: workSeoAudit,
+    title: "Overall SEO Fix — 100% Store Score",
+    body: "Full technical, on-page, mobile and content SEO clean-up that took the store audit to a perfect 100% score.",
+    category: "SEO",
+    duration: "2 weeks",
+    likes: 91,
+  },
+  {
+    image: workPagespeed,
+    title: "Page Speed Optimization — 100 Performance",
+    body: "Core Web Vitals and asset optimisation pushing PageSpeed Insights to 100 performance on mobile.",
+    category: "Optimization",
+    duration: "1 week",
+    likes: 84,
+  },
+  {
+    image: workMerchantApproval,
+    title: "Google Merchant Feed Approval",
+    body: "Product feed setup and fixes with all 64 products approved in Google Merchant Center, zero disapprovals.",
+    category: "Marketing",
+    duration: "10 days",
+    likes: 73,
+  },
+  {
+    image: workBrokenLinks,
+    title: "Broken Link Fix & Site Health Audit",
+    body: "412 URLs crawled and repaired across the store — scan completed with 0 broken links and 0 errors.",
+    category: "SEO",
+    duration: "5 days",
+    likes: 58,
+  },
+  {
+    image: workSitemap,
+    title: "Sitemap Submission & Indexing Setup",
+    body: "XML sitemap generated and successfully submitted to Google Search Console for faster indexing.",
+    category: "SEO",
+    duration: "2 days",
+    likes: 47,
+  },
+  {
+    image: workOwnership,
+    title: "Google Search Console Ownership Verification",
+    body: "Domain ownership verified via HTML tag so search performance and indexing data are fully tracked.",
+    category: "SEO",
+    duration: "1 day",
+    likes: 39,
+  },
+  {
+    image: workProductSeo,
+    title: "Product SEO — 100 Meta Tag Scores",
+    body: "Focus keywords, titles and meta descriptions optimised across the catalogue for perfect 100 meta tag scores.",
+    category: "SEO",
+    duration: "2 weeks",
+    likes: 66,
+  },
+  {
     image: workMerchant,
     title: "Merchant Feed Approval",
     body: "Full product feed setup and clean-up with every submitted product approved.",
@@ -805,9 +870,9 @@ export const teamIntro =
   "Meet the people behind Brainboxworld. Our team works across development, marketing and project delivery to keep every build on track.";
 
 export const teamLocations = [
-  { flag: "🇺🇸", label: "United States" },
-  { flag: "🇬🇧", label: "United Kingdom" },
-  { flag: "🇳🇬", label: "Nigeria" },
+  { code: "us", label: "United States" },
+  { code: "gb", label: "United Kingdom" },
+  { code: "ng", label: "Nigeria" },
 ];
 
 export const team = [
@@ -833,10 +898,10 @@ export const team = [
     bio: "Coordinates projects end to end and runs multi-channel marketing so work ships on time and performs after launch.",
   },
   {
-    photo: teamRosheed,
-    name: "Muhd Soliu Abdul Rosheed",
+    photo: teamBashit,
+    name: "Qoseem Abdul Bashit",
     role: "Business Planner & Marketing Strategist",
-    email: "crowntech.partner@gmail.com",
+    website: "https://bashberryxpert.vercel.app",
     bio: "Strategic business planning and comprehensive marketing strategy development for eCommerce success.",
   },
   {
