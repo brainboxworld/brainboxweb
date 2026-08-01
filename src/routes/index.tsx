@@ -1,6 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { ReviewsPanel } from "@/components/ReviewsPanel";
+import { flagUrl } from "@/lib/reviews";
+
 import {
   brand,
   contact,
