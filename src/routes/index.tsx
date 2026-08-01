@@ -1,6 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { ReviewsPanel } from "@/components/ReviewsPanel";
+import { SalesVideos } from "@/components/SalesVideos";
+import { ClientSites } from "@/components/ClientSites";
 import { flagUrl } from "@/lib/reviews";
 
 import {
@@ -461,7 +463,7 @@ function Index() {
                       width={768}
                       height={512}
                       loading="lazy"
-                      className="h-44 w-full object-cover"
+                      className="max-h-72 w-full bg-muted object-contain"
                     />
                     <div className="p-5">
                       <h3 className="font-semibold">{p.title}</h3>
@@ -475,6 +477,9 @@ function Index() {
                   </article>
                 ))}
               </div>
+
+              <SalesVideos />
+              <ClientSites />
             </section>
           )}
 

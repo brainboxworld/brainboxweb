@@ -63,6 +63,8 @@ import svcMerchantListing from "@/assets/service-merchant-listing.png";
 import svcGoogleAds from "@/assets/service-google-ads.png";
 import svcEmailAutomation from "@/assets/service-email-automation.png";
 import svcCro from "@/assets/service-cro.png";
+import svcTiktokAds from "@/assets/service-tiktok-ads-sales.jpg";
+import svcFacebookAds from "@/assets/service-facebook-ads-sales.png";
 
 // Portfolio images
 import workMerchant from "@/assets/work-merchant.jpg";
@@ -71,6 +73,13 @@ import workSpeed from "@/assets/work-speed.jpg";
 import workSales from "@/assets/work-sales.jpg";
 import workAds from "@/assets/work-fashion.jpg";
 import workDecor from "@/assets/work-home-decor.jpg";
+
+// Client result videos (upload a new .mp4 with the lovable-assets CLI and swap the pointer)
+import vidStoreGrowth1 from "@/assets/videos/store-growth-1.mp4.asset.json";
+import vidHealthEmporium from "@/assets/videos/health-emporium.mp4.asset.json";
+import vidNamana from "@/assets/videos/namana-london.mp4.asset.json";
+import vidSalesProof from "@/assets/videos/sales-proof.mp4.asset.json";
+import vidHolidayPuzzles from "@/assets/videos/holidaypuzzles.mp4.asset.json";
 
 
 export const brand = {
@@ -674,6 +683,64 @@ export const services = [
     returning: "54 returning clients",
     price: "$250 - $600",
   },
+  {
+    image: svcTiktokAds,
+    title: "TikTok Ads Sales",
+    details: {
+      overview:
+        "Full TikTok Ads management built for sales, not views — creative testing, audience structure and daily optimisation towards profitable cost per conversion.",
+      includes: [
+        "TikTok Ads Manager and Pixel setup",
+        "Campaign, ad group and audience structure",
+        "Creative testing with UGC-style hooks",
+        "Daily bid, budget and placement optimisation",
+        "Conversion and event tracking",
+        "Weekly performance reporting",
+      ],
+      process: [
+        "Account audit and tracking setup",
+        "Creative and campaign build",
+        "Testing phase",
+        "Scale winners and report",
+      ],
+      timeline: "Ongoing monthly",
+    },
+    body: "TikTok Ads campaigns managed end to end — creative testing, audience targeting and daily optimisation focused on real conversions.",
+    rating: "5.0",
+    reviews: "96",
+    experts: "4 specialists available",
+    returning: "38 returning clients",
+    price: "$250 - $450",
+  },
+  {
+    image: svcFacebookAds,
+    title: "Facebook Ads Sales",
+    details: {
+      overview:
+        "Meta (Facebook & Instagram) ad campaigns engineered around purchase ROAS, with clean tracking, tested creative and disciplined scaling.",
+      includes: [
+        "Meta Business Suite and Pixel/CAPI setup",
+        "Advantage+ and manual campaign builds",
+        "Creative production briefs and testing",
+        "Retargeting and retention audiences",
+        "ROAS and conversion rate tracking",
+        "Monthly performance reporting",
+      ],
+      process: [
+        "Tracking audit and account setup",
+        "Creative and campaign build",
+        "Test and learn phase",
+        "Scale profitable campaigns",
+      ],
+      timeline: "Ongoing monthly",
+    },
+    body: "Facebook and Instagram ad management built around purchase ROAS, with clean tracking, tested creative and controlled scaling.",
+    rating: "5.0",
+    reviews: "112",
+    experts: "5 specialists available",
+    returning: "44 returning clients",
+    price: "$280 - $500",
+  },
 ];
 
 
@@ -864,6 +931,41 @@ export const portfolio = [
     duration: "18 days",
     likes: 55,
   },
+];
+
+/* ── LIVE CLIENT WEBSITES ──────────────────────────────────────
+   Add or remove a site by copying one block. "work" is what we
+   did on that store. Previews are generated automatically.      */
+export const clientSitesIntro =
+  "Live stores we have built, optimised or scaled. Open any preview to visit the site.";
+
+export const clientSites = [
+  { url: "https://mobiledrugsscreen.com", name: "Mobile Drugs Screen", work: "Store build, technical SEO fixes and Google Search Console setup" },
+  { url: "https://www.musicboxattic.com", name: "Music Box Attic", work: "Product SEO, page speed optimisation and merchant feed clean-up" },
+  { url: "https://childrenshha.com", name: "Children's HHA", work: "Site health audit, broken link repair and on-page SEO" },
+  { url: "https://retrospec.com", name: "Retrospec", work: "Conversion rate optimisation and performance tuning" },
+  { url: "https://darntough.com", name: "Darn Tough", work: "Technical SEO, structured data and Core Web Vitals work" },
+  { url: "https://ukstore.weightliftinghouse.com", name: "Weightlifting House UK", work: "Shopify store development and catalogue migration" },
+  { url: "https://thelandmarkproject.com", name: "The Landmark Project", work: "Email marketing automation and retention flows" },
+  { url: "https://slickgorilla.co.uk", name: "Slick Gorilla", work: "Paid social creative testing and campaign management" },
+  { url: "https://www.menscompressionshirt.com", name: "Men's Compression Shirt", work: "Google Ads, Merchant Center feed and product SEO" },
+  { url: "https://thegoodkiddycollection.store", name: "The Good Kiddy Collection", work: "Full store setup, theme customisation and launch" },
+  { url: "https://stay-loaded.com", name: "Stay Loaded", work: "Dropshipping setup, supplier integration and CRO" },
+  { url: "https://bellybandit.com", name: "Belly Bandit", work: "SEO overhaul and content optimisation" },
+  { url: "https://www.afflictionclothing.com", name: "Affliction Clothing", work: "Performance optimisation and paid media support" },
+];
+
+/* ── STORE SALES GROWTH VIDEOS ─────────────────────────────────
+   Swap a video: upload a new .mp4 and change the import above.  */
+export const salesVideosIntro =
+  "Screen recordings from live client dashboards showing the sales growth we delivered. Press play, then use the arrows to see the next client.";
+
+export const salesVideos = [
+  { src: vidSalesProof.url, title: "Sales Proof — Revenue Dashboard", note: "Store revenue growth after conversion and retention work." },
+  { src: vidHealthEmporium.url, title: "health-emporium.co.uk", note: "SEO and CRO work driving consistent monthly order growth." },
+  { src: vidNamana.url, title: "Namana London", note: "Paid social and email flows scaling monthly sales." },
+  { src: vidHolidayPuzzles.url, title: "holiyaypuzzles.com", note: "Seasonal campaign push with Google Ads and Merchant feed." },
+  { src: vidStoreGrowth1.url, title: "Client Store Growth", note: "Store optimisation and ad management results." },
 ];
 
 export const teamIntro =
