@@ -1,7 +1,7 @@
 import { clientSites, clientSitesIntro } from "@/content/site";
 
 function previewUrl(url: string) {
-  return `https://image.thum.io/get/width/800/crop/900/noanimate/${url}`;
+  return `https://image.thum.io/get/width/800/${url}`;
 }
 
 export function ClientSites() {
