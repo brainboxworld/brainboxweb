@@ -677,17 +677,6 @@ export const services = [
     returning: "54 returning clients",
     price: "$250 - $600",
   },
-  {
-    image: svcTiktokAds,
-    title: "__REMOVE_TIKTOK__",
-    details: { overview: "", includes: [], process: [], timeline: "" },
-    body: "",
-    rating: "5.0",
-    reviews: "0",
-    experts: "",
-    returning: "",
-    price: "",
-  },
 ];
 
 
