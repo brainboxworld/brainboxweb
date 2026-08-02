@@ -700,17 +700,28 @@ function ContactPanel() {
       <section className="surface-card p-6 text-center md:p-8">
         <h2 className="text-xl font-semibold tracking-tight">Prefer Instant Chat?</h2>
         <p className="mt-2 text-sm text-muted-foreground">
-          Connect with us on WhatsApp for immediate assistance
+          Ask our AI assistant a question right here, or connect on WhatsApp for immediate
+          assistance from the team
         </p>
-        <a
-          href={contact.whatsapp}
-          target="_blank"
-          rel="noreferrer"
-          className="mt-5 inline-block rounded-lg bg-gradient-brand px-6 py-3 text-sm font-semibold text-brand-foreground transition-opacity hover:opacity-90"
-        >
-          Start WhatsApp Chat
-        </a>
+        <div className="mt-5 flex flex-wrap justify-center gap-3">
+          <button
+            type="button"
+            onClick={() => window.dispatchEvent(new CustomEvent("open-live-chat"))}
+            className="rounded-lg bg-gradient-brand px-6 py-3 text-sm font-semibold text-brand-foreground transition-opacity hover:opacity-90"
+          >
+            Start Live Chat
+          </button>
+          <a
+            href={contact.whatsapp}
+            target="_blank"
+            rel="noreferrer"
+            className="rounded-lg border border-border px-6 py-3 text-sm font-semibold transition-colors hover:bg-muted"
+          >
+            Start WhatsApp Chat
+          </a>
+        </div>
       </section>
+
 
     </div>
   );
