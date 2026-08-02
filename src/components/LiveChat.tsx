@@ -31,6 +31,13 @@ export function LiveChat() {
     if (open) inputRef.current?.focus();
   }, [open]);
 
+  useEffect(() => {
+    const openChat = () => setOpen(true);
+    window.addEventListener("open-live-chat", openChat);
+    return () => window.removeEventListener("open-live-chat", openChat);
+  }, []);
+
+
   async function send(text: string) {
     const trimmed = text.trim();
     if (!trimmed || loading) return;
