@@ -67,12 +67,6 @@ import svcTiktokAds from "@/assets/service-tiktok-ads-sales.jpg";
 import svcFacebookAds from "@/assets/service-facebook-ads-sales.png";
 
 // Portfolio images
-import workMerchant from "@/assets/work-merchant.jpg";
-import workSeo from "@/assets/work-skincare.jpg";
-import workSpeed from "@/assets/work-speed.jpg";
-import workSales from "@/assets/work-sales.jpg";
-import workAds from "@/assets/work-fashion.jpg";
-import workDecor from "@/assets/work-home-decor.jpg";
 
 // Client result videos (upload a new .mp4 with the lovable-assets CLI and swap the pointer)
 import vidStoreGrowth1 from "@/assets/videos/store-growth-1.mp4.asset.json";
@@ -683,64 +677,6 @@ export const services = [
     returning: "54 returning clients",
     price: "$250 - $600",
   },
-  {
-    image: svcTiktokAds,
-    title: "TikTok Ads Sales",
-    details: {
-      overview:
-        "Full TikTok Ads management built for sales, not views — creative testing, audience structure and daily optimisation towards profitable cost per conversion.",
-      includes: [
-        "TikTok Ads Manager and Pixel setup",
-        "Campaign, ad group and audience structure",
-        "Creative testing with UGC-style hooks",
-        "Daily bid, budget and placement optimisation",
-        "Conversion and event tracking",
-        "Weekly performance reporting",
-      ],
-      process: [
-        "Account audit and tracking setup",
-        "Creative and campaign build",
-        "Testing phase",
-        "Scale winners and report",
-      ],
-      timeline: "Ongoing monthly",
-    },
-    body: "TikTok Ads campaigns managed end to end — creative testing, audience targeting and daily optimisation focused on real conversions.",
-    rating: "5.0",
-    reviews: "96",
-    experts: "4 specialists available",
-    returning: "38 returning clients",
-    price: "$250 - $450",
-  },
-  {
-    image: svcFacebookAds,
-    title: "Facebook Ads Sales",
-    details: {
-      overview:
-        "Meta (Facebook & Instagram) ad campaigns engineered around purchase ROAS, with clean tracking, tested creative and disciplined scaling.",
-      includes: [
-        "Meta Business Suite and Pixel/CAPI setup",
-        "Advantage+ and manual campaign builds",
-        "Creative production briefs and testing",
-        "Retargeting and retention audiences",
-        "ROAS and conversion rate tracking",
-        "Monthly performance reporting",
-      ],
-      process: [
-        "Tracking audit and account setup",
-        "Creative and campaign build",
-        "Test and learn phase",
-        "Scale profitable campaigns",
-      ],
-      timeline: "Ongoing monthly",
-    },
-    body: "Facebook and Instagram ad management built around purchase ROAS, with clean tracking, tested creative and controlled scaling.",
-    rating: "5.0",
-    reviews: "112",
-    experts: "5 specialists available",
-    returning: "44 returning clients",
-    price: "$280 - $500",
-  },
 ];
 
 
@@ -829,107 +765,75 @@ export const portfolioIntro =
 export const portfolio = [
   {
     image: workSeoAudit,
-    title: "Overall SEO Fix — 100% Store Score",
-    body: "Full technical, on-page, mobile and content SEO clean-up that took the store audit to a perfect 100% score.",
+    title: "Full Technical SEO Overhaul",
+    body: "Technical, on-page, mobile and content SEO clean-up that took the store's audit score to a perfect 100%.",
     category: "SEO",
     duration: "2 weeks",
     likes: 91,
   },
   {
     image: workPagespeed,
-    title: "Page Speed Optimization — 100 Performance",
-    body: "Core Web Vitals and asset optimisation pushing PageSpeed Insights to 100 performance on mobile.",
-    category: "Optimization",
+    title: "Core Web Vitals & Page Speed Optimization",
+    body: "Asset, script and image optimisation that lifted the mobile PageSpeed Insights performance score to 100.",
+    category: "Performance",
     duration: "1 week",
     likes: 84,
   },
   {
     image: workMerchantApproval,
-    title: "Google Merchant Feed Approval",
-    body: "Product feed setup and fixes with all 64 products approved in Google Merchant Center, zero disapprovals.",
-    category: "Marketing",
+    title: "Google Merchant Center Feed Approval",
+    body: "Product feed setup and error clean-up with all 64 products approved in Google Merchant Center and zero disapprovals.",
+    category: "Google Shopping",
     duration: "10 days",
     likes: 73,
   },
   {
     image: workBrokenLinks,
-    title: "Broken Link Fix & Site Health Audit",
-    body: "412 URLs crawled and repaired across the store — scan completed with 0 broken links and 0 errors.",
+    title: "Site Health Audit & Broken Link Repair",
+    body: "412 URLs crawled and repaired across the store, finishing with 0 broken links and 0 crawl errors.",
     category: "SEO",
     duration: "5 days",
     likes: 58,
   },
   {
     image: workSitemap,
-    title: "Sitemap Submission & Indexing Setup",
-    body: "XML sitemap generated and successfully submitted to Google Search Console for faster indexing.",
-    category: "SEO",
+    title: "XML Sitemap Submission & Indexing Setup",
+    body: "Sitemap generated and successfully submitted to Google Search Console so new pages get indexed faster.",
+    category: "Technical SEO",
     duration: "2 days",
     likes: 47,
   },
   {
     image: workOwnership,
     title: "Google Search Console Ownership Verification",
-    body: "Domain ownership verified via HTML tag so search performance and indexing data are fully tracked.",
-    category: "SEO",
+    body: "Domain ownership verified so search performance, indexing and coverage data are fully tracked.",
+    category: "Technical SEO",
     duration: "1 day",
     likes: 39,
   },
   {
     image: workProductSeo,
-    title: "Product SEO — 100 Meta Tag Scores",
-    body: "Focus keywords, titles and meta descriptions optimised across the catalogue for perfect 100 meta tag scores.",
+    title: "Product Page SEO Optimization",
+    body: "Focus keywords, titles and meta descriptions optimised across the catalogue for perfect meta tag scores.",
     category: "SEO",
     duration: "2 weeks",
     likes: 66,
   },
   {
-    image: workMerchant,
-    title: "Merchant Feed Approval",
-    body: "Full product feed setup and clean-up with every submitted product approved.",
-    category: "Marketing",
-    duration: "2 weeks",
-    likes: 67,
+    image: svcTiktokAds,
+    title: "TikTok Ads — Profitable Sales Campaigns",
+    body: "TikTok Ads Manager campaigns scaled on tested UGC creative, delivering consistent purchase volume at a profitable cost per conversion.",
+    category: "Paid Media",
+    duration: "Ongoing",
+    likes: 88,
   },
   {
-    image: workSeo,
-    title: "Skincare SEO Overhaul",
-    body: "Technical SEO and content restructure that lifted organic sessions substantially.",
-    category: "SEO",
-    duration: "3 weeks",
-    likes: 52,
-  },
-  {
-    image: workSpeed,
-    title: "Page Speed Optimization",
-    body: "Cut load time sharply and pushed performance scores into the high nineties.",
-    category: "Optimization",
-    duration: "1 week",
-    likes: 44,
-  },
-  {
-    image: workSales,
-    title: "Store Sales Growth",
-    body: "Conversion work and retention flows that grew monthly revenue in 30 days.",
-    category: "Development",
-    duration: "1 month",
-    likes: 78,
-  },
-  {
-    image: workAds,
-    title: "Fashion Catalogue Migration",
-    body: "Over 1,200 SKUs migrated to a new theme with zero downtime.",
-    category: "Development",
-    duration: "2 weeks",
-    likes: 61,
-  },
-  {
-    image: workDecor,
-    title: "Home Decor Launch",
-    body: "Brand-new storefront designed, built and launched inside 18 days.",
-    category: "Development",
-    duration: "18 days",
-    likes: 55,
+    image: svcFacebookAds,
+    title: "Facebook & Instagram Ads — ROAS Growth",
+    body: "Meta ad account rebuilt around clean Pixel/CAPI tracking and winning creative, lifting return on ad spend month over month.",
+    category: "Paid Media",
+    duration: "Ongoing",
+    likes: 95,
   },
 ];
 
