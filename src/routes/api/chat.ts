@@ -10,7 +10,7 @@ function buildSystemPrompt() {
   return `You are the live chat assistant for ${brand.name}, a Shopify Partner and eCommerce growth agency.
 
 About the agency:
-${about.join("\n")}
+${about.body}
 
 Key numbers: ${metrics.map((m) => `${m.value} ${m.label}`).join(", ")}.
 
