@@ -584,15 +584,8 @@ function Index() {
         <p className="mt-2">{footer.text}</p>
       </footer>
 
-      <a
-        href={contact.whatsapp}
-        target="_blank"
-        rel="noreferrer"
-        aria-label={`Chat with ${brand.name} on WhatsApp`}
-        className="fixed bottom-6 right-6 rounded-full bg-gradient-brand px-5 py-3 text-sm font-semibold text-brand-foreground shadow-lg transition-opacity hover:opacity-90"
-      >
-        WhatsApp
-      </a>
+      <LiveChat />
+
     </div>
   );
 }
