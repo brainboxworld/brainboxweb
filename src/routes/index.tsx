@@ -3,6 +3,8 @@ import { useEffect, useState } from "react";
 import { ReviewsPanel } from "@/components/ReviewsPanel";
 import { SalesVideos } from "@/components/SalesVideos";
 import { ClientSites } from "@/components/ClientSites";
+import { LiveChat } from "@/components/LiveChat";
+
 import { flagUrl } from "@/lib/reviews";
 
 import {
