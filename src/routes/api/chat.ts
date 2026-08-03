@@ -1,5 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { brand, contact, services, about, metrics, team } from "@/content/site";
+import { createLovableAiGatewayProvider } from "@/lib/ai-gateway.server";
+import { generateText } from "ai";
 
 type ChatMessage = { role: "user" | "assistant"; content: string };
 
@@ -44,44 +46,35 @@ export const Route = createFileRoute("/api/chat")({
           }
 
           const apiKey = process.env["LOVABLE_API_KEY"];
-          if (!apiKey) {
-            return Response.json({ error: "AI is not configured" }, { status: 500 });
+          let raw = "";
+          if (apiKey) {
+            const gateway = createLovableAiGatewayProvider(apiKey);
+            const result = await generateText({
+              model: gateway("google/gemini-3.6-flash"),
+              system: buildSystemPrompt(),
+              messages: messages.map((message) => ({
+                role: message.role,
+                content: String(message.content ?? "").slice(0, 4000),
+              })),
+            });
+            raw = result.text.trim();
+          } else {
+            // External deployments do not inherit Lovable's server secret. Keep chat
+            // available by using the canonical Brainboxworld AI endpoint server-side.
+            const fallback = await fetch("https://brainboxweb.lovable.app/api/chat", {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify({ messages }),
+            });
+            if (!fallback.ok) {
+              return Response.json({ error: "AI chat is temporarily unavailable." }, { status: fallback.status });
+            }
+            const data = (await fallback.json()) as { reply?: string; escalate?: boolean };
+            return Response.json({
+              reply: data.reply ?? "The team can help you directly on WhatsApp.",
+              escalate: data.escalate ?? !data.reply,
+            });
           }
-
-          const res = await fetch("https://ai.gateway.lovable.dev/v1/chat/completions", {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-              Authorization: `Bearer ${apiKey}`,
-            },
-            body: JSON.stringify({
-              model: "google/gemini-3.6-flash",
-              messages: [
-                { role: "system", content: buildSystemPrompt() },
-                ...messages.map((m) => ({
-                  role: m.role === "assistant" ? "assistant" : "user",
-                  content: String(m.content ?? "").slice(0, 4000),
-                })),
-              ],
-            }),
-          });
-
-          if (res.status === 429) {
-            return Response.json({ error: "Too many messages right now." }, { status: 429 });
-          }
-          if (res.status === 402) {
-            return Response.json({ error: "AI chat is temporarily unavailable." }, { status: 402 });
-          }
-          if (!res.ok) {
-            const detail = await res.text();
-            console.error("AI gateway error", res.status, detail);
-            return Response.json({ error: "AI chat failed" }, { status: 500 });
-          }
-
-          const data = (await res.json()) as {
-            choices?: Array<{ message?: { content?: string } }>;
-          };
-          const raw = data.choices?.[0]?.message?.content?.trim() ?? "";
           const escalate = raw.includes("[WHATSAPP]");
           const reply = raw.replace(/\[WHATSAPP\]/g, "").trim();
 

@@ -74,6 +74,11 @@ import vidHealthEmporium from "@/assets/videos/health-emporium.mp4.asset.json";
 import vidNamana from "@/assets/videos/namana-london.mp4.asset.json";
 import vidSalesProof from "@/assets/videos/sales-proof.mp4.asset.json";
 import vidHolidayPuzzles from "@/assets/videos/holidaypuzzles.mp4.asset.json";
+import posterStoreGrowth1 from "@/assets/video-posters/store-growth-1.jpg";
+import posterHealthEmporium from "@/assets/video-posters/health-emporium.jpg";
+import posterNamana from "@/assets/video-posters/namana-london.jpg";
+import posterSalesProof from "@/assets/video-posters/sales-proof.jpg";
+import posterHolidayPuzzles from "@/assets/video-posters/holidaypuzzles.jpg";
 
 
 export const brand = {
@@ -866,11 +871,11 @@ export const salesVideosIntro =
   "Screen recordings from live client dashboards showing the sales growth we delivered. Press play, then use the arrows to see the next client.";
 
 export const salesVideos = [
-  { src: vidSalesProof.url, title: "Sales Proof — Revenue Dashboard", note: "Store revenue growth after conversion and retention work." },
-  { src: vidHealthEmporium.url, title: "health-emporium.co.uk", note: "SEO and CRO work driving consistent monthly order growth." },
-  { src: vidNamana.url, title: "Namana London", note: "Paid social and email flows scaling monthly sales." },
-  { src: vidHolidayPuzzles.url, title: "holiyaypuzzles.com", note: "Seasonal campaign push with Google Ads and Merchant feed." },
-  { src: vidStoreGrowth1.url, title: "Client Store Growth", note: "Store optimisation and ad management results." },
+  { src: `https://brainboxweb.lovable.app${vidSalesProof.url}`, poster: posterSalesProof, title: "Sales Proof — Revenue Dashboard", note: "Store revenue growth after conversion and retention work." },
+  { src: `https://brainboxweb.lovable.app${vidHealthEmporium.url}`, poster: posterHealthEmporium, title: "health-emporium.co.uk", note: "SEO and CRO work driving consistent monthly order growth." },
+  { src: `https://brainboxweb.lovable.app${vidNamana.url}`, poster: posterNamana, title: "Namana London", note: "Paid social and email flows scaling monthly sales." },
+  { src: `https://brainboxweb.lovable.app${vidHolidayPuzzles.url}`, poster: posterHolidayPuzzles, title: "holiyaypuzzles.com", note: "Seasonal campaign push with Google Ads and Merchant feed." },
+  { src: `https://brainboxweb.lovable.app${vidStoreGrowth1.url}`, poster: posterStoreGrowth1, title: "Client Store Growth", note: "Store optimisation and ad management results." },
 ];
 
 export const teamIntro =
