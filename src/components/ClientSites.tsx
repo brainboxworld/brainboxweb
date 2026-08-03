@@ -9,6 +9,10 @@ function faviconUrl(url: string) {
 }
 
 function previewUrl(url: string) {
+  return `https://image.thum.io/get/width/1200/crop/750/noanimate/${url}`;
+}
+
+function fallbackPreviewUrl(url: string) {
   return `https://api.microlink.io/?url=${encodeURIComponent(url)}&screenshot=true&meta=false&embed=screenshot.url&viewport.width=1280&viewport.height=800`;
 }
 
