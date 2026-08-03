@@ -857,6 +857,7 @@ export const clientSites = [
   { url: "https://stay-loaded.com", name: "Stay Loaded", work: "Dropshipping setup, supplier integration and CRO" },
   { url: "https://bellybandit.com", name: "Belly Bandit", work: "SEO overhaul and content optimisation" },
   { url: "https://www.afflictionclothing.com", name: "Affliction Clothing", work: "Performance optimisation and paid media support" },
+  { url: "https://greediersocialmedia.co.uk", name: "Greedier Social Media", work: "Social media marketing site support, SEO and performance optimisation" },
 ];
 
 /* ── STORE SALES GROWTH VIDEOS ─────────────────────────────────

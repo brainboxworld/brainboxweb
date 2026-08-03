@@ -9,6 +9,10 @@ function faviconUrl(url: string) {
 }
 
 function previewUrl(url: string) {
+  return `https://image.thum.io/get/width/1200/crop/750/noanimate/${url}`;
+}
+
+function fallbackPreviewUrl(url: string) {
   return `https://api.microlink.io/?url=${encodeURIComponent(url)}&screenshot=true&meta=false&embed=screenshot.url&viewport.width=1280&viewport.height=800`;
 }
 
@@ -32,9 +36,17 @@ export function ClientSites() {
                 src={previewUrl(s.url)}
                 alt={`${s.name} website preview`}
                 loading="lazy"
+                onError={(e) => {
+                  const img = e.currentTarget;
+                  if (!img.dataset["fallback"]) {
+                    img.dataset["fallback"] = "1";
+                    img.src = fallbackPreviewUrl(s.url);
+                  }
+                }}
                 className="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.03]"
               />
             </div>
+
 
             <div className="flex flex-1 flex-col p-4">
               <div className="grid grid-cols-[auto_minmax(0,1fr)] items-center gap-3">
