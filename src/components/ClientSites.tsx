@@ -1,4 +1,18 @@
 import { clientSites, clientSitesIntro } from "@/content/site";
+import mobileDrugsScreen from "@/assets/site-previews/mobile-drugs-screen.jpg";
+import musicBoxAttic from "@/assets/site-previews/music-box-attic.jpg";
+import childrensHha from "@/assets/site-previews/childrens-hha.jpg";
+import retrospec from "@/assets/site-previews/retrospec.jpg";
+import darnTough from "@/assets/site-previews/darn-tough.jpg";
+import weightliftingHouse from "@/assets/site-previews/weightlifting-house.jpg";
+import landmarkProject from "@/assets/site-previews/landmark-project.jpg";
+import slickGorilla from "@/assets/site-previews/slick-gorilla.jpg";
+import mensCompressionShirt from "@/assets/site-previews/mens-compression-shirt.jpg";
+import goodKiddyCollection from "@/assets/site-previews/good-kiddy-collection.jpg";
+import stayLoaded from "@/assets/site-previews/stay-loaded.jpg";
+import bellyBandit from "@/assets/site-previews/belly-bandit.jpg";
+import afflictionClothing from "@/assets/site-previews/affliction-clothing.jpg";
+import greedierSocialMedia from "@/assets/site-previews/greedier-social-media.jpg";
 
 function domainOf(url: string) {
   return url.replace(/^https?:\/\//, "").replace(/\/$/, "");
@@ -8,13 +22,11 @@ function faviconUrl(url: string) {
   return `https://www.google.com/s2/favicons?domain=${domainOf(url)}&sz=128`;
 }
 
-function previewUrl(url: string) {
-  return `https://image.thum.io/get/width/1200/crop/750/noanimate/${url}`;
-}
-
-function fallbackPreviewUrl(url: string) {
-  return `https://api.microlink.io/?url=${encodeURIComponent(url)}&screenshot=true&meta=false&embed=screenshot.url&viewport.width=1280&viewport.height=800`;
-}
+const previews = [
+  mobileDrugsScreen, musicBoxAttic, childrensHha, retrospec, darnTough,
+  weightliftingHouse, landmarkProject, slickGorilla, mensCompressionShirt,
+  goodKiddyCollection, stayLoaded, bellyBandit, afflictionClothing, greedierSocialMedia,
+];
 
 export function ClientSites() {
   return (
@@ -23,7 +35,7 @@ export function ClientSites() {
       <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{clientSitesIntro}</p>
 
       <div className="mt-5 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-        {clientSites.map((s) => (
+        {clientSites.map((s, index) => (
           <a
             key={s.url}
             href={s.url}
@@ -33,16 +45,9 @@ export function ClientSites() {
           >
             <div className="relative aspect-[16/10] w-full overflow-hidden bg-muted">
               <img
-                src={previewUrl(s.url)}
+                src={previews[index]}
                 alt={`${s.name} website preview`}
                 loading="lazy"
-                onError={(e) => {
-                  const img = e.currentTarget;
-                  if (!img.dataset["fallback"]) {
-                    img.dataset["fallback"] = "1";
-                    img.src = fallbackPreviewUrl(s.url);
-                  }
-                }}
                 className="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.03]"
               />
             </div>
