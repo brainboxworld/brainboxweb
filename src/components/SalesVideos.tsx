@@ -25,10 +25,11 @@ export function SalesVideos() {
           <video
             ref={ref}
             key={current.src}
-            src={current.src}
+            src={`${current.src}#t=0.1`}
             controls={playing}
             playsInline
-            preload="metadata"
+            muted={!playing}
+            preload="auto"
             onPlay={() => setPlaying(true)}
             onPause={() => setPlaying(false)}
             className="max-h-[70vh] w-full bg-background object-contain"
