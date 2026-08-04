@@ -189,7 +189,7 @@ function Index() {
             <div className="relative mx-auto mt-2 w-28">
               <img
                 src={brand.logo}
-                alt={`${brand.name} logo`}
+                alt={`${brand.name} eCommerce & Shopify agency`}
                 width={768}
                 height={768}
                 className="h-28 w-28 rounded-full border border-border bg-card object-contain p-2"
