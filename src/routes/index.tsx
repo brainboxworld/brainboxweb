@@ -217,7 +217,9 @@ function Index() {
               <span aria-hidden="true">•</span>
               <LocalTime />
             </p>
-            <h1 className="mt-4 text-2xl font-bold tracking-tight">{brand.name}</h1>
+            <h1 className="mt-4 text-2xl font-bold tracking-tight">
+              {brand.name} — {brand.tagline}
+            </h1>
             <p className="mt-1 text-sm text-muted-foreground">{brand.tagline}</p>
 
             <p className="mt-3 text-sm font-medium">
