@@ -17,6 +17,7 @@ import {
   services,
   servicesIntro,
   successRatings,
+  reviewSummary,
   portfolio,
   portfolioIntro,
   team,
@@ -67,9 +68,49 @@ export const Route = createFileRoute("/")({
           "Shopify development, redesign, SEO and conversion optimization for growing eCommerce brands.",
       },
       { property: "og:type", content: "website" },
+      { property: "og:url", content: "https://brainboxweb.lovable.app/" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: "/" }],
+    links: [{ rel: "canonical", href: "https://brainboxweb.lovable.app/" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "Organization",
+              "@id": "https://brainboxweb.lovable.app/#organization",
+              name: brand.name,
+              url: "https://brainboxweb.lovable.app/",
+              description: brand.tagline,
+              slogan: brand.quote,
+              areaServed: brand.locations,
+              aggregateRating: {
+                "@type": "AggregateRating",
+                ratingValue: reviewSummary.average,
+                reviewCount: Number(reviewSummary.total.replace(/[^\d]/g, "")),
+                bestRating: 5,
+                worstRating: 1,
+              },
+            },
+            {
+              "@type": "WebSite",
+              "@id": "https://brainboxweb.lovable.app/#website",
+              url: "https://brainboxweb.lovable.app/",
+              name: brand.name,
+              publisher: { "@id": "https://brainboxweb.lovable.app/#organization" },
+            },
+            ...services.map((s) => ({
+              "@type": "Service",
+              name: s.title,
+              description: s.details?.overview ?? servicesIntro,
+              provider: { "@id": "https://brainboxweb.lovable.app/#organization" },
+            })),
+          ],
+        }),
+      },
+    ],
   }),
   component: Index,
 });
@@ -148,7 +189,7 @@ function Index() {
             <div className="relative mx-auto mt-2 w-28">
               <img
                 src={brand.logo}
-                alt={`${brand.name} logo`}
+                alt={`${brand.name} eCommerce & Shopify agency`}
                 width={768}
                 height={768}
                 className="h-28 w-28 rounded-full border border-border bg-card object-contain p-2"
@@ -176,7 +217,9 @@ function Index() {
               <span aria-hidden="true">•</span>
               <LocalTime />
             </p>
-            <h1 className="mt-4 text-2xl font-bold tracking-tight">{brand.name}</h1>
+            <h1 className="mt-4 text-2xl font-bold tracking-tight">
+              {brand.name} — {brand.tagline}
+            </h1>
             <p className="mt-1 text-sm text-muted-foreground">{brand.tagline}</p>
 
             <p className="mt-3 text-sm font-medium">
@@ -419,7 +462,7 @@ function Index() {
                               }}
                               className="rounded-lg bg-gradient-brand px-4 py-2 text-xs font-semibold text-brand-foreground transition-opacity hover:opacity-90"
                             >
-                              Learn more
+                              View {s.title} details
                             </button>
                           </div>
                         </div>
