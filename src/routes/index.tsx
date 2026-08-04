@@ -462,7 +462,7 @@ function Index() {
                               }}
                               className="rounded-lg bg-gradient-brand px-4 py-2 text-xs font-semibold text-brand-foreground transition-opacity hover:opacity-90"
                             >
-                              Learn more
+                              View {s.title} details
                             </button>
                           </div>
                         </div>
