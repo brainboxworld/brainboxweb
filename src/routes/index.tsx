@@ -17,6 +17,7 @@ import {
   services,
   servicesIntro,
   successRatings,
+  reviewSummary,
   portfolio,
   portfolioIntro,
   team,
