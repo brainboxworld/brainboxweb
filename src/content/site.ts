@@ -927,7 +927,7 @@ export const team = [
     photo: teamMubaraq,
     name: "Sulyman Mubaraq",
     role: "Google Developer & SEO Specialist",
-    website: "https://theheroesagency.vercel.app",
+    website: "https://www.theheroesagency.org",
     bio: "Google certified developer focusing on technical SEO, Google Ads optimization and search engine ranking improvement.",
   },
   {
