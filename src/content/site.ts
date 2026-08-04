@@ -863,7 +863,9 @@ export const clientSites = [
   { url: "https://bellybandit.com", name: "Belly Bandit", work: "SEO overhaul and content optimisation" },
   { url: "https://www.afflictionclothing.com", name: "Affliction Clothing", work: "Performance optimisation and paid media support" },
   { url: "https://greediersocialmedia.co.uk", name: "Greedier Social Media", work: "Social media marketing site support, SEO and performance optimisation" },
+  { url: "https://www.maisonette.com", name: "Maisonette", work: "Catalogue SEO, site speed improvements and merchandising support" },
 ];
+
 
 /* ── STORE SALES GROWTH VIDEOS ─────────────────────────────────
    Swap a video: upload a new .mp4 and change the import above.  */
@@ -927,7 +929,7 @@ export const team = [
     photo: teamMubaraq,
     name: "Sulyman Mubaraq",
     role: "Google Developer & SEO Specialist",
-    website: "https://theheroesagency.vercel.app",
+    website: "https://www.theheroesagency.org",
     bio: "Google certified developer focusing on technical SEO, Google Ads optimization and search engine ranking improvement.",
   },
   {
