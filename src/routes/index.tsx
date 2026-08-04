@@ -67,9 +67,49 @@ export const Route = createFileRoute("/")({
           "Shopify development, redesign, SEO and conversion optimization for growing eCommerce brands.",
       },
       { property: "og:type", content: "website" },
+      { property: "og:url", content: "https://brainboxweb.lovable.app/" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: "/" }],
+    links: [{ rel: "canonical", href: "https://brainboxweb.lovable.app/" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "Organization",
+              "@id": "https://brainboxweb.lovable.app/#organization",
+              name: brand.name,
+              url: "https://brainboxweb.lovable.app/",
+              description: brand.tagline,
+              slogan: brand.quote,
+              areaServed: brand.locations,
+              aggregateRating: {
+                "@type": "AggregateRating",
+                ratingValue: reviewSummary.average,
+                reviewCount: Number(reviewSummary.total.replace(/[^\d]/g, "")),
+                bestRating: 5,
+                worstRating: 1,
+              },
+            },
+            {
+              "@type": "WebSite",
+              "@id": "https://brainboxweb.lovable.app/#website",
+              url: "https://brainboxweb.lovable.app/",
+              name: brand.name,
+              publisher: { "@id": "https://brainboxweb.lovable.app/#organization" },
+            },
+            ...services.map((s) => ({
+              "@type": "Service",
+              name: s.title,
+              description: s.details?.overview ?? servicesIntro,
+              provider: { "@id": "https://brainboxweb.lovable.app/#organization" },
+            })),
+          ],
+        }),
+      },
+    ],
   }),
   component: Index,
 });
