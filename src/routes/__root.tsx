@@ -80,6 +80,11 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { title: "Brainboxworld" },
       { name: "description", content: "eCommerce and Shopify growth agency." },
       { name: "author", content: "Brainboxworld" },
+      {
+        name: "google-site-verification",
+        content: "nJH7Kv07CutAOxnqwv2Ig1MaEuL0AB2o6PrM7jK-9Y8",
+      },
+
       { property: "og:site_name", content: "Brainboxworld" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
