@@ -79,6 +79,10 @@ import posterHealthEmporium from "@/assets/video-posters/health-emporium.jpg";
 import posterNamana from "@/assets/video-posters/namana-london.jpg";
 import posterSalesProof from "@/assets/video-posters/sales-proof.jpg";
 import posterHolidayPuzzles from "@/assets/video-posters/holidaypuzzles.jpg";
+import vidReview1 from "@/assets/videos/review-1.mp4.asset.json";
+import vidReview2 from "@/assets/videos/review-2.mp4.asset.json";
+import posterReview1 from "@/assets/video-posters/review-1.jpg";
+import posterReview2 from "@/assets/video-posters/review-2.jpg";
 
 
 export const brand = {
@@ -110,7 +114,7 @@ export const brand = {
 export const contact = {
   whatsapp: "https://wa.me/13312782900",
   phoneDisplay: "+1 (331) 278-2900",
-  email: "info@brainboxworld.dedyn.io",
+  email: "info@brainboxworld.com",
 };
 
 // icon can be: "linkedin" | "instagram" | "tiktok" | "x"
@@ -879,6 +883,39 @@ export const salesVideos = [
   { src: `https://brainboxweb.lovable.app${vidHolidayPuzzles.url}`, poster: posterHolidayPuzzles, title: "holiyaypuzzles.com", note: "Seasonal campaign push with Google Ads and Merchant feed." },
   { src: `https://brainboxweb.lovable.app${vidStoreGrowth1.url}`, poster: posterStoreGrowth1, title: "Client Store Growth", note: "Store optimisation and ad management results." },
 ];
+
+/* ── VIDEO REVIEWS ─────────────────────────────────────────────
+   Add a new video review:
+   1. Upload your .mp4 with the lovable-assets CLI into src/assets/videos/
+   2. Add an import at the top of this file, e.g.
+        import vidReview3 from "@/assets/videos/review-3.mp4.asset.json";
+        import posterReview3 from "@/assets/video-posters/review-3.jpg";
+   3. Copy one block below and edit the text.                      */
+export const videoReviewsIntro =
+  "Shopify and ecommerce store owners talking about sales growth — in their own words.";
+
+export const videoReviews = [
+  {
+    src: `https://brainboxweb.lovable.app${vidReview1.url}`,
+    poster: posterReview1,
+    title: "Shopify store owner review",
+    name: "",
+    location: "",
+    flag: "",
+    note: "",
+  },
+  {
+    src: `https://brainboxweb.lovable.app${vidReview2.url}`,
+    poster: posterReview2,
+    title: "Shopify store owner review",
+    name: "",
+    location: "",
+    flag: "",
+    note: "",
+  },
+];
+
+
 
 export const teamIntro =
   "Meet the people behind Brainboxworld. Our team works across development, marketing and project delivery to keep every build on track.";
