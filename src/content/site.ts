@@ -880,6 +880,39 @@ export const salesVideos = [
   { src: `https://brainboxweb.lovable.app${vidStoreGrowth1.url}`, poster: posterStoreGrowth1, title: "Client Store Growth", note: "Store optimisation and ad management results." },
 ];
 
+/* ── VIDEO REVIEWS ─────────────────────────────────────────────
+   Add a new video review:
+   1. Upload your .mp4 with the lovable-assets CLI into src/assets/videos/
+   2. Add an import at the top of this file, e.g.
+        import vidReview3 from "@/assets/videos/review-3.mp4.asset.json";
+        import posterReview3 from "@/assets/video-posters/review-3.jpg";
+   3. Copy one block below and edit the text.                      */
+export const videoReviewsIntro =
+  "Shopify and ecommerce store owners talking about sales growth — in their own words.";
+
+export const videoReviews = [
+  {
+    src: `https://brainboxweb.lovable.app${vidReview1.url}`,
+    poster: posterReview1,
+    title: "Shopify store owner review",
+    name: "",
+    location: "",
+    flag: "",
+    note: "",
+  },
+  {
+    src: `https://brainboxweb.lovable.app${vidReview2.url}`,
+    poster: posterReview2,
+    title: "Shopify store owner review",
+    name: "",
+    location: "",
+    flag: "",
+    note: "",
+  },
+];
+
+
+
 export const teamIntro =
   "Meet the people behind Brainboxworld. Our team works across development, marketing and project delivery to keep every build on track.";
 
