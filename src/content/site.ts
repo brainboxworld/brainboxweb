@@ -79,6 +79,10 @@ import posterHealthEmporium from "@/assets/video-posters/health-emporium.jpg";
 import posterNamana from "@/assets/video-posters/namana-london.jpg";
 import posterSalesProof from "@/assets/video-posters/sales-proof.jpg";
 import posterHolidayPuzzles from "@/assets/video-posters/holidaypuzzles.jpg";
+import vidReview1 from "@/assets/videos/review-1.mp4.asset.json";
+import vidReview2 from "@/assets/videos/review-2.mp4.asset.json";
+import posterReview1 from "@/assets/video-posters/review-1.jpg";
+import posterReview2 from "@/assets/video-posters/review-2.jpg";
 
 
 export const brand = {
