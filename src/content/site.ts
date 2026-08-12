@@ -110,7 +110,7 @@ export const brand = {
 export const contact = {
   whatsapp: "https://wa.me/13312782900",
   phoneDisplay: "+1 (331) 278-2900",
-  email: "info@brainboxworld.dedyn.io",
+  email: "info@brainboxworld.com",
 };
 
 // icon can be: "linkedin" | "instagram" | "tiktok" | "x"
