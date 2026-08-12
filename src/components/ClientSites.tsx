@@ -146,4 +146,31 @@ export function ClientSites() {
   );
 }
 
+/** Auto-scrolling (marquee) version used on the Reviews page. */
+export function ClientSitesMarquee() {
+  const loop = [...clientSites, ...clientSites];
+
+  return (
+    <section className="surface-card p-4 sm:p-6 md:p-8">
+      <div className="text-center">
+        <h2 className="text-2xl font-bold tracking-tight md:text-3xl">Live Client Websites</h2>
+        <p className="mx-auto mt-3 max-w-2xl text-sm leading-relaxed text-muted-foreground">
+          {clientSitesIntro}
+        </p>
+      </div>
+
+      <div className="marquee mt-6">
+        <div className="marquee-track">
+          {loop.map((site, index) => (
+            <div key={`${site.url}-${index}`} className="w-[260px] shrink-0 sm:w-[320px]">
+              <SiteCard site={site} preview={previews[index % clientSites.length]} />
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
 export default ClientSites;
+
