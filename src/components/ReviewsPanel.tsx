@@ -280,7 +280,7 @@ export function ReviewsPanel() {
   return (
     <section className="surface-card p-4 sm:p-6 md:p-8">
       <div className="text-center">
-        <h2 className="text-2xl font-bold tracking-tight md:text-3xl">Client Reviews</h2>
+        <h2 className="text-2xl font-bold tracking-tight md:text-3xl">Shopify Store Owner Reviews</h2>
         <p className="mx-auto mt-3 max-w-2xl text-sm leading-relaxed text-muted-foreground">
           {reviewsIntro}
         </p>

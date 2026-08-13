@@ -57,7 +57,9 @@ export function SalesVideos() {
   return (
     <section className="mt-8">
       <h3 className="text-lg font-bold tracking-tight sm:text-xl">Store Sales Growth</h3>
-      <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{salesVideosIntro}</p>
+      {salesVideosIntro && (
+        <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{salesVideosIntro}</p>
+      )}
 
       <div className="mt-5 grid gap-5 md:grid-cols-2">
         {salesVideos.map((v) => (
