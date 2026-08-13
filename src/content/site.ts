@@ -83,6 +83,8 @@ import vidReview1 from "@/assets/videos/review-1.mp4.asset.json";
 import vidReview2 from "@/assets/videos/review-2.mp4.asset.json";
 import posterReview1 from "@/assets/video-posters/review-1.jpg";
 import posterReview2 from "@/assets/video-posters/review-2.jpg";
+import vidReview3 from "@/assets/videos/review-3.mp4.asset.json";
+import posterReview3 from "@/assets/video-posters/review-3.jpg";
 
 
 export const brand = {
