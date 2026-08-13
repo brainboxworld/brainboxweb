@@ -190,8 +190,8 @@ function SiteFooter() {
             SEO, paid media and retention in one team.
           </p>
           <p className="mt-3 text-sm text-muted-foreground">
-            <a href={contact.whatsappUrl ?? "#"} className="hover:text-foreground">
-              WhatsApp {contact.phone}
+            <a href={contact.whatsapp} className="hover:text-foreground">
+              WhatsApp {contact.phoneDisplay}
             </a>
             <br />
             <a href={`mailto:${contact.email}`} className="hover:text-foreground">
