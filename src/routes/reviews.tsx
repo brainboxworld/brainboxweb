@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/site/SiteLayout";
-import { WhatsAppCta } from "@/components/site/sections";
+import { WhatsAppCta, KeyMetrics } from "@/components/site/sections";
 import { VideoReviews } from "@/components/VideoReviews";
 import { SalesVideos } from "@/components/SalesVideos";
 import { ReviewsPanel } from "@/components/ReviewsPanel";
@@ -32,10 +32,13 @@ function ReviewsPage() {
     <SiteLayout>
       <h1 className="sr-only">Brainboxworld reviews</h1>
 
-      {/* 1. Video Reviews */}
+      {/* 1. Key Metrics */}
+      <KeyMetrics />
+
+      {/* 2. Video Reviews */}
       <VideoReviews />
 
-      {/* 2. Shopify Sales Proof */}
+      {/* 3. Shopify Sales Proof */}
       <section className="surface-card p-4 sm:p-6 md:p-8">
         <div className="text-center">
           <h2 className="text-2xl font-bold tracking-tight md:text-3xl">Shopify Sales Proof</h2>
@@ -47,20 +50,13 @@ function ReviewsPage() {
         <SalesVideos />
       </section>
 
-      {/* 3. Shopify Store Owner Reviews */}
-      <section className="space-y-6">
-        <div className="text-center">
-          <h2 className="text-2xl font-bold tracking-tight md:text-3xl">
-            Shopify Store Owner Reviews
-          </h2>
-        </div>
-        <ReviewsPanel />
-      </section>
-
       {/* 4. Live Client Websites */}
       <ClientSitesMarquee />
 
-      {/* 5. CTA */}
+      {/* 5. Shopify Store Owner Reviews */}
+      <ReviewsPanel />
+
+      {/* 6. CTA */}
       <WhatsAppCta />
     </SiteLayout>
   );

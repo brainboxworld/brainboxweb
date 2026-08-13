@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/site/SiteLayout";
-import { PortfolioProjects } from "@/components/site/sections";
+import { PortfolioProjects, KeyMetrics, WhatsAppCta } from "@/components/site/sections";
 import { SalesVideos } from "@/components/SalesVideos";
 import { ClientSites } from "@/components/ClientSites";
 
@@ -29,6 +29,7 @@ function PortfolioPage() {
   return (
     <SiteLayout>
       <h1 className="sr-only">Brainboxworld portfolio</h1>
+      <KeyMetrics />
       <div>
         <PortfolioProjects />
         <div className="mx-auto max-w-none px-0">
@@ -36,6 +37,7 @@ function PortfolioPage() {
           <ClientSites />
         </div>
       </div>
+      <WhatsAppCta />
     </SiteLayout>
   );
 }
