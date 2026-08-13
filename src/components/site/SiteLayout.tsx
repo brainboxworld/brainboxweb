@@ -1,7 +1,7 @@
 import { useEffect, useState, type ReactNode } from "react";
 import { Link } from "@tanstack/react-router";
 import { LiveChat } from "@/components/LiveChat";
-import { brand, contact, socials, footer, about } from "@/content/site";
+import { brand, contact, socials, footer } from "@/content/site";
 
 export const NAV = [
   { label: "Reviews", to: "/reviews" },
@@ -266,15 +266,6 @@ export function SiteLayout({
 
         <main className="min-w-0 space-y-6">
           <nav className="surface-card flex flex-wrap gap-1 p-2">
-            <Link
-              to="/"
-              activeOptions={{ exact: true }}
-              activeProps={{ className: "bg-gradient-brand text-brand-foreground" }}
-              inactiveProps={{ className: "text-muted-foreground hover:bg-muted" }}
-              className="rounded-lg px-4 py-2 text-sm font-medium transition-colors"
-            >
-              Home
-            </Link>
             {NAV.map((n) => (
               <Link
                 key={n.to}
