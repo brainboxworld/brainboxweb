@@ -877,8 +877,7 @@ export const clientSites = [
 
 /* ── STORE SALES GROWTH VIDEOS ─────────────────────────────────
    Swap a video: upload a new .mp4 and change the import above.  */
-export const salesVideosIntro =
-  "Screen recordings from live client dashboards showing the sales growth we delivered. Press play, then use the arrows to see the next client.";
+export const salesVideosIntro = "";
 
 export const salesVideos = [
   { src: `https://brainboxweb.lovable.app${vidSalesProof.url}`, poster: posterSalesProof, title: "Sales Proof — Revenue Dashboard", note: "Store revenue growth after conversion and retention work." },
@@ -899,6 +898,15 @@ export const videoReviewsIntro =
   "Shopify and ecommerce store owners talking about sales growth — in their own words.";
 
 export const videoReviews = [
+  {
+    src: `https://brainboxweb.lovable.app${vidReview3.url}`,
+    poster: posterReview3,
+    title: "Shopify store owner review",
+    name: "",
+    location: "",
+    flag: "",
+    note: "",
+  },
   {
     src: `https://brainboxweb.lovable.app${vidReview1.url}`,
     poster: posterReview1,
