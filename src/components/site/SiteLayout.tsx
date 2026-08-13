@@ -183,26 +183,9 @@ function SiteFooter() {
               loading="lazy"
               className="h-10 w-10 rounded-full border border-border object-contain p-1"
             />
-            <p className="font-bold">{brand.name}</p>
-          </div>
-          <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{about.body}</p>
-          <div className="mt-4 space-y-1 text-sm">
-            <a
-              href={contact.whatsapp}
-              target="_blank"
-              rel="noreferrer"
-              className="block text-muted-foreground hover:text-foreground"
-            >
-              WhatsApp {contact.phoneDisplay}
-            </a>
-            <a
-              href={`mailto:${contact.email}`}
-              className="block break-all text-muted-foreground hover:text-foreground"
-            >
-              {contact.email}
-            </a>
           </div>
         </div>
+
 
         <div>
           <h2 className="text-sm font-semibold uppercase tracking-wide">Explore</h2>
