@@ -1,7 +1,7 @@
 import { useEffect, useState, type ReactNode } from "react";
 import { Link } from "@tanstack/react-router";
 import { LiveChat } from "@/components/LiveChat";
-import { brand, contact, socials, footer, about } from "@/content/site";
+import { brand, contact, socials, footer } from "@/content/site";
 
 export const NAV = [
   { label: "Reviews", to: "/reviews" },
@@ -183,26 +183,9 @@ function SiteFooter() {
               loading="lazy"
               className="h-10 w-10 rounded-full border border-border object-contain p-1"
             />
-            <p className="font-bold">{brand.name}</p>
-          </div>
-          <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{about.body}</p>
-          <div className="mt-4 space-y-1 text-sm">
-            <a
-              href={contact.whatsapp}
-              target="_blank"
-              rel="noreferrer"
-              className="block text-muted-foreground hover:text-foreground"
-            >
-              WhatsApp {contact.phoneDisplay}
-            </a>
-            <a
-              href={`mailto:${contact.email}`}
-              className="block break-all text-muted-foreground hover:text-foreground"
-            >
-              {contact.email}
-            </a>
           </div>
         </div>
+
 
         <div>
           <h2 className="text-sm font-semibold uppercase tracking-wide">Explore</h2>
@@ -283,15 +266,6 @@ export function SiteLayout({
 
         <main className="min-w-0 space-y-6">
           <nav className="surface-card flex flex-wrap gap-1 p-2">
-            <Link
-              to="/"
-              activeOptions={{ exact: true }}
-              activeProps={{ className: "bg-gradient-brand text-brand-foreground" }}
-              inactiveProps={{ className: "text-muted-foreground hover:bg-muted" }}
-              className="rounded-lg px-4 py-2 text-sm font-medium transition-colors"
-            >
-              Home
-            </Link>
             {NAV.map((n) => (
               <Link
                 key={n.to}
