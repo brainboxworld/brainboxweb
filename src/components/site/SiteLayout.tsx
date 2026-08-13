@@ -183,8 +183,23 @@ function SiteFooter() {
               loading="lazy"
               className="h-10 w-10 rounded-full border border-border object-contain p-1"
             />
+            <span className="text-sm font-bold tracking-tight">{brand.name}</span>
           </div>
+          <p className="mt-3 max-w-xs text-sm leading-relaxed text-muted-foreground">
+            Shopify-focused eCommerce agency. We build, optimise and manage stores — development,
+            SEO, paid media and retention in one team.
+          </p>
+          <p className="mt-3 text-sm text-muted-foreground">
+            <a href={contact.whatsappUrl ?? "#"} className="hover:text-foreground">
+              WhatsApp {contact.phone}
+            </a>
+            <br />
+            <a href={`mailto:${contact.email}`} className="hover:text-foreground">
+              {contact.email}
+            </a>
+          </p>
         </div>
+
 
 
         <div>
