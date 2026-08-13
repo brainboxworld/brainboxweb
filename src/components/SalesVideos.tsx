@@ -13,12 +13,16 @@ function SalesVideoCard({ item }: { item: (typeof salesVideos)[number] }) {
           src={item.src}
           poster={item.poster}
           controls={playing}
+          controlsList="nodownload noplaybackrate noremoteplayback"
+          disablePictureInPicture
+          disableRemotePlayback
+          onContextMenu={(e) => e.preventDefault()}
           playsInline
           preload="metadata"
           onPlay={() => setPlaying(true)}
           onPause={() => setPlaying(false)}
           onEnded={() => setPlaying(false)}
-          className="max-h-[70vh] w-full bg-background object-contain"
+          className="max-h-[80vh] w-full bg-background object-contain"
         />
         {!playing && (
           <button
@@ -53,7 +57,9 @@ export function SalesVideos() {
   return (
     <section className="mt-8">
       <h3 className="text-lg font-bold tracking-tight sm:text-xl">Store Sales Growth</h3>
-      <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{salesVideosIntro}</p>
+      {salesVideosIntro && (
+        <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{salesVideosIntro}</p>
+      )}
 
       <div className="mt-5 grid gap-5 md:grid-cols-2">
         {salesVideos.map((v) => (

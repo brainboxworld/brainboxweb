@@ -83,6 +83,8 @@ import vidReview1 from "@/assets/videos/review-1.mp4.asset.json";
 import vidReview2 from "@/assets/videos/review-2.mp4.asset.json";
 import posterReview1 from "@/assets/video-posters/review-1.jpg";
 import posterReview2 from "@/assets/video-posters/review-2.jpg";
+import vidReview3 from "@/assets/videos/review-3.mp4.asset.json";
+import posterReview3 from "@/assets/video-posters/review-3.jpg";
 
 
 export const brand = {
@@ -155,6 +157,8 @@ export const skills = [
 ];
 
 export const metrics = [
+  { value: "$6.2M+", label: "Revenue Generated" },
+  { value: "500+", label: "Stores Transformed" },
   { value: "450+", label: "Projects Completed" },
   { value: "6+", label: "Years Experience" },
   { value: "280+", label: "Happy Clients" },
@@ -873,8 +877,7 @@ export const clientSites = [
 
 /* ── STORE SALES GROWTH VIDEOS ─────────────────────────────────
    Swap a video: upload a new .mp4 and change the import above.  */
-export const salesVideosIntro =
-  "Screen recordings from live client dashboards showing the sales growth we delivered. Press play, then use the arrows to see the next client.";
+export const salesVideosIntro = "";
 
 export const salesVideos = [
   { src: `https://brainboxweb.lovable.app${vidSalesProof.url}`, poster: posterSalesProof, title: "Sales Proof — Revenue Dashboard", note: "Store revenue growth after conversion and retention work." },
@@ -895,6 +898,15 @@ export const videoReviewsIntro =
   "Shopify and ecommerce store owners talking about sales growth — in their own words.";
 
 export const videoReviews = [
+  {
+    src: `https://brainboxweb.lovable.app${vidReview3.url}`,
+    poster: posterReview3,
+    title: "Shopify store owner review",
+    name: "",
+    location: "",
+    flag: "",
+    note: "",
+  },
   {
     src: `https://brainboxweb.lovable.app${vidReview1.url}`,
     poster: posterReview1,
