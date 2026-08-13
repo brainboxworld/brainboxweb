@@ -51,17 +51,31 @@ export function AboutContent() {
         )}
       </section>
 
-      <section className="surface-card p-6 md:p-8">
-        <h2 className="text-xl font-semibold tracking-tight">Key Metrics</h2>
-        <div className="mt-4 grid grid-cols-2 gap-4 md:grid-cols-5">
-          {metrics.map((m) => (
-            <div key={m.label} className="rounded-xl bg-muted p-4 text-center">
-              <p className="text-xl font-bold">{m.value}</p>
-              <p className="mt-1 text-xs text-muted-foreground">{m.label}</p>
-            </div>
-          ))}
-        </div>
-      </section>
+      <KeyMetrics />
+    </>
+  );
+}
+
+export function KeyMetrics() {
+  return (
+    <section className="surface-card p-6 md:p-8">
+      <h2 className="text-xl font-semibold tracking-tight">Key Metrics</h2>
+      <div className="mt-4 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
+        {metrics.map((m) => (
+          <div key={m.label} className="rounded-xl bg-muted p-4 text-center">
+            <p className="text-xl font-bold">{m.value}</p>
+            <p className="mt-1 text-xs text-muted-foreground">{m.label}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+}
+
+function AboutTail() {
+  return (
+    <>
+      <div className="hidden" />
     </>
   );
 }
