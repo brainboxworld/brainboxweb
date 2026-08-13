@@ -72,13 +72,6 @@ export function KeyMetrics() {
   );
 }
 
-function AboutTail() {
-  return (
-    <>
-      <div className="hidden" />
-    </>
-  );
-}
 
 export function ServicesContent() {
   const [openService, setOpenService] = useState<(typeof services)[number] | null>(null);
