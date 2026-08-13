@@ -13,12 +13,16 @@ function SalesVideoCard({ item }: { item: (typeof salesVideos)[number] }) {
           src={item.src}
           poster={item.poster}
           controls={playing}
+          controlsList="nodownload noplaybackrate noremoteplayback"
+          disablePictureInPicture
+          disableRemotePlayback
+          onContextMenu={(e) => e.preventDefault()}
           playsInline
           preload="metadata"
           onPlay={() => setPlaying(true)}
           onPause={() => setPlaying(false)}
           onEnded={() => setPlaying(false)}
-          className="max-h-[70vh] w-full bg-background object-contain"
+          className="max-h-[80vh] w-full bg-background object-contain"
         />
         {!playing && (
           <button

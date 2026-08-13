@@ -14,12 +14,16 @@ function VideoReviewCard({ item }: { item: (typeof videoReviews)[number] }) {
           src={item.src}
           poster={item.poster}
           controls={playing}
+          controlsList="nodownload noplaybackrate noremoteplayback"
+          disablePictureInPicture
+          disableRemotePlayback
+          onContextMenu={(e) => e.preventDefault()}
           playsInline
           preload="metadata"
           onPlay={() => setPlaying(true)}
           onPause={() => setPlaying(false)}
           onEnded={() => setPlaying(false)}
-          className="max-h-[70vh] w-full bg-background object-contain"
+          className="aspect-[9/16] max-h-[85vh] w-full bg-background object-cover"
         />
         {!playing && (
           <button
