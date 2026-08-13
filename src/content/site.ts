@@ -157,6 +157,8 @@ export const skills = [
 ];
 
 export const metrics = [
+  { value: "$6.2M+", label: "Revenue Generated" },
+  { value: "500+", label: "Stores Transformed" },
   { value: "450+", label: "Projects Completed" },
   { value: "6+", label: "Years Experience" },
   { value: "280+", label: "Happy Clients" },
