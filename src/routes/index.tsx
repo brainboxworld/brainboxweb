@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteLayout, NAV } from "@/components/site/SiteLayout";
 import { AboutContent } from "@/components/site/sections";
+import { ReviewsBody } from "@/components/site/ReviewsBody";
 import { brand, reviewSummary, services, servicesIntro } from "@/content/site";
 
 export const Route = createFileRoute("/")({
