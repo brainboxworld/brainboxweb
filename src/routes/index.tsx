@@ -7,17 +7,20 @@ import { brand, reviewSummary, services, servicesIntro } from "@/content/site";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Brainboxworld — eCommerce & Shopify Growth Agency" },
+      { title: "Brainboxworld — Shopify Growth Agency & Store Owner Reviews" },
       {
         name: "description",
         content:
-          "Brainboxworld builds, optimizes and manages high-converting Shopify stores. Development, design, SEO, ads and store management for eCommerce brands.",
+          "See the reviews first: video testimonials, Shopify sales proof and 1,000+ store owner ratings, then explore the Shopify development, SEO, ads and CRO services behind them.",
       },
-      { property: "og:title", content: "Brainboxworld — eCommerce & Shopify Growth Agency" },
+      {
+        property: "og:title",
+        content: "Brainboxworld — Shopify Growth Agency & Store Owner Reviews",
+      },
       {
         property: "og:description",
         content:
-          "Shopify development, redesign, SEO and conversion optimization for growing eCommerce brands.",
+          "Video reviews, real Shopify dashboards and 1,000+ store owner ratings — the proof behind our Shopify development, SEO, ads and CRO services.",
       },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "https://brainboxweb.lovable.app/" },
