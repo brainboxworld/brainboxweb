@@ -70,6 +70,8 @@ export const Route = createFileRoute("/")({
 function Index() {
   return (
     <SiteLayout isHome>
+      <ReviewsBody />
+
       <AboutContent />
 
       <section className="surface-card p-6 md:p-8">
